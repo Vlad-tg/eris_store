@@ -15,17 +15,6 @@ def get_models_for_count(*model_names):
     return [models.Count(model_name) for model_name in model_names]
 
 
-
-
-
-class MinResolutionErrorException(Exception):
-    pass
-
-
-class MaxResolutionErrorException(Exception):
-    pass
-
-
 class Category(models.Model):
     name = models.CharField(verbose_name='Name category', max_length=250)
     slug = models.SlugField(unique=True)
@@ -162,9 +151,6 @@ class Compare(models.Model):
 
 
 class Customer(models.Model):
-    MIN_RESOLUTION = (200, 200)
-    MAX_RESOLUTION = (8000, 8000)
-    MAX_IMAGE_SIZE = 3145728
 
     user = models.ForeignKey(User, verbose_name='Customer', on_delete=models.CASCADE)
     icon = models.ImageField(verbose_name='Icon', default='owner.png', upload_to='icon/')
@@ -233,11 +219,6 @@ class VideoLaptop(models.Model):
     def __str__(self):
         return self.name
 
-    def save(self, *args, **kwargs):
-        if not self.slug:
-            self.slug = slugify(self.name)
-        super(VideoLaptop, self).save(*args, **kwargs)
-
     def get_absolute_url(self):
         return reverse('filter', kwargs={'slug': self.name})
 
@@ -305,11 +286,6 @@ class OperatingSystemLaptop(models.Model):
     def __str__(self):
         return self.name
 
-    def save(self, *args, **kwargs):
-        if not self.slug:
-            self.slug = slugify(self.name)
-        super(OperatingSystemLaptop, self).save(*args, **kwargs)
-
     def get_absolute_url(self):
         return reverse('filter', kwargs={'slug': self.name})
 
@@ -370,11 +346,6 @@ class Rating(models.Model):
 
     def __str__(self):
         return f"{self.star} - {self.laptop}"
-
-    def save_rating(self, *args, **kwargs):
-        h = Rating.objects.filter(laptop_id=15).aggregate(Avg('star'))
-        self.model = Rating.objects.get_or_update(total_rating=h)
-        super().save(*args, **kwargs)
 
 
 class Post(models.Model):

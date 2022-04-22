@@ -54,7 +54,6 @@ class AllView(CartMixin, View):
             'videos': videos,
             'products_laptop': product_laptop,
             'cart': self.cart,
-            # 'page_obj': page_obj,
             'products_sale_laptop': products_sale_laptop,
             'products_sale_laptop_one': products_sale_laptop_one,
             'products_sale_laptop_three': products_sale_laptop_three,
@@ -387,19 +386,10 @@ class SearchViews(AccountMixins, ListView):
 
 class TestSearchProductView(AccountMixins, DetailView):
     def get(self, request, *args, **kwargs):
-        search_laptop = Product.objects.filter(category_id__name='laptop')
-        smart_qs = Product.objects.filter(category_id__name='smartphone')
-        head = Product.objects.filter(category_id__name='headphone')
-        category = Category.objects.values('id')
         search_get_product = request.GET.get("search_product")
         min_get_product = request.GET.get("min_price_search")
         max_get_product = request.GET.get("max_price_search")
-        choice_all_product = {
-            "ALL PRODUCT": 100
-        }
-        laptop_get = request.GET.get("laptop")
-        smartphone_get = request.GET.get("smartphone")
-        headphone_get = request.GET.get("headphone")
+
         select_product_get = request.GET.get("select_product")
 
         if is_valid_queryparam(search_get_product and min_get_product and max_get_product and select_product_get):
