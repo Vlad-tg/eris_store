@@ -1,0 +1,342 @@
+.h3-checkout-text {
+    color: #ff0;
+    text-shadow: 0 0 5px #ff0;
+    text-align: center;
+    margin-top: 50px;
+    margin-left: 500px;
+
+    width: 200px;
+}
+
+.div-checkout-order {
+
+    height: 1050px;
+    width: 1200px;
+    margin-top: 30px;
+    background: #222;
+
+    box-shadow: inset 0 0 10px #000;
+
+}
+
+.div-checkout-order-two {
+
+    position: relative;
+    top: 75px;
+    margin-right: auto;
+    margin-left: auto;
+    height: 900px;
+    width: 540px;
+    box-shadow:  0 0 5px #000;
+
+}
+
+.div-checkout-order-form {
+
+    position: relative;
+    top: 35px;
+    margin-right: auto;
+    margin-left: auto;
+    height: 835px;
+    width: 450px;
+    font-family: 'Sprite Graffiti', serif;
+
+}
+
+.div-checkout-order-form-two {
+    margin-top: 40px;
+
+}
+
+.input-checkout-form {
+
+    font-size: 100%;
+    font-family: 'Sprite Graffiti', serif;
+    background: #222;
+    border: solid 1px #ffff00;
+    box-shadow: 0 0 5px #ffff00;
+    position: relative;
+    height: 35px;
+    top: 27px;
+    left: 10px;
+    color: #ff0;
+    text-shadow: 0 0 5px #000;
+    border-radius: 5px;
+}
+
+.input-checkout-form:hover {
+  background: #333;
+
+}
+
+.form-group {
+    margin-top: 25px;
+}
+
+.requiredField {
+    color: #ff0;
+    text-shadow: 0 0 5px #000;
+}
+
+label {
+    color: #ff0;
+    position: relative;
+    text-shadow: 0 0 5px #000;
+    top: -7px;
+    left: 12px;
+}
+
+.text-muted {
+    color: #FFD700!important;
+    text-shadow: 0 0 5px #000;
+    top: 5px!important;
+    position: relative;
+    left: 10px;
+}
+.textinput {
+    background: #222!important;
+    border-color: #000!important;
+    box-shadow: inset 0 0 5px #000!important;
+    color: #cccc00!important;
+
+
+}
+
+.textinput:-webkit-autofill {
+    border: solid 2px #000!important;
+}
+
+.textinput:focus {
+    box-shadow: 0 0 5px rgba(255, 255, 0, 0.2), inset 0 0 20px rgba(255, 255, 0, 0.1)!important;
+    border-color: #FFFF00!important;
+    background: #222!important;
+    animation: flashing_create_account 800ms ease-out infinite alternate!important;
+}
+
+.select {
+    background: #222!important;
+    border-color: #000!important;
+    box-shadow: inset 0 0 5px #000!important;
+    color: #cccc00!important;
+}
+
+.select:focus {
+    box-shadow: 0 0 5px rgba(255, 255, 0, 0.2), inset 0 0 20px rgba(255, 255, 0, 0.1)!important;
+    border-color: #FFFF00!important;
+    background: #222!important;
+    animation: flashing_create_account 800ms ease-out infinite alternate!important;
+}
+
+.textarea {
+    background: #222!important;
+    border-color: #000!important;
+    box-shadow: inset 0 0 5px #000!important;
+    color: #cccc00!important;
+}
+
+.textarea:focus {
+    box-shadow: 0 0 5px rgba(255, 255, 0, 0.2), inset 0 0 20px rgba(255, 255, 0, 0.1)!important;
+    border-color: #FFFF00!important;
+    background: #222!important;
+    animation: flashing_create_account 800ms ease-out infinite alternate!important;
+}
+
+.h3-checkout-text {
+    color: #ff0;
+    font-size: 150%;
+    text-shadow: 0 0 10px #ff0;
+    text-align: center;
+}
+
+.div-checkout-product {
+    margin-top: 50px;
+    margin-left: 100px;
+    width: 1000px;
+    box-shadow: 0 0 15px #000;
+
+}
+
+.div-checkout-product-nav {
+    height: 80px;
+    width: 1000px;
+    border-bottom: solid 1px #ffff00;
+    display: flex;
+    padding-top: 23px;
+}
+
+.p-checkout-product-nav {
+    font-size: 100%;
+    color: #ff0;
+    text-shadow: 0 0 5px #ff0;
+}
+
+.img-checkout-product {
+    margin-left: 50px;
+    height: 150px;
+    width: 150px;
+    filter: drop-shadow(0 0 15px #000);
+}
+
+.td-checkout-product-image {
+    width: 250px;
+    height: 250px;
+    box-shadow:  inset 12px 0 15px -4px #000,
+        inset -12px 0 8px -4px #000;
+    border-radius: 10px;
+    position: relative;
+    left: 70px;
+
+}
+
+.tr-checkout-product {
+    border-bottom: solid 1px #ff0;
+}
+
+.th-checkout-col {
+
+    position: relative;
+    color: #ff0;
+    text-shadow: 0 0 5px #ff0;
+    font-family: 'Sprite Graffiti', serif;
+    border-bottom: solid 1px #ff0;
+    background: #1E90FF;
+    height: 40px;
+    width: 1000px;
+
+}
+
+
+.td-checkout-product-total-price {
+    left: 150px;
+    position: relative;
+    width: 200px;
+}
+
+.td-checkout-qty {
+    left: 200px;
+    top: -10px;
+    position: relative;
+    width: 170px;
+}
+
+.p-checkout-product-total-price {
+    color: #FFD700;
+    position: relative;
+    text-shadow: 0 0 5px #000;
+    font-size: 130%;
+    font-family: 'Sprite Graffiti', serif;
+
+}
+
+
+
+.th-checkout-product-title {
+    color: #cccc00;
+    font-family: 'Sprite Graffiti', serif;
+    height: 30px;
+    width: 300px;
+    position: relative;
+    font-size: 80%;
+    left: 20px;
+    text-shadow: 0 0 5px #000;
+    text-align: center;
+}
+
+#p-checkout-col-name {
+    position: relative;
+    margin-left: 110px;
+}
+#p-checkout-col-picture {
+    position: relative;
+    margin-left: 290px;
+
+}
+#p-checkout-col-total-price {
+    position: relative;
+    margin-left: 100px;
+
+}
+
+#p-checkout-col-number {
+    position: relative;
+    margin-left: 160px;
+
+}
+
+.p-checkout-product-price {
+    position: relative;
+    top: 10px;
+    font-family: 'Sprite Graffiti', serif;
+    color: #FFD700;
+    font-size: 105%;
+    text-shadow: 0 0 5px #000;
+
+}
+
+.td-checkout-total {
+    position: relative;
+    left: -400px;
+    color: #ff0;
+    font-family: 'Sprite Graffiti', serif;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+}
+
+.td-checkout-total-products {
+    position: relative;
+    left: 35px;
+    color: #ff0;
+    font-family: 'Sprite Graffiti', serif;
+
+}
+
+.td-checkout-total-price{
+    position: relative;
+    left: -47px;
+    color: #FFD700;
+    font-size: 105%;
+    text-shadow: 0 0 5px #000;
+    font-family: 'Sprite Graffiti', serif;
+
+}
+
+
+.div-checkout-empty {
+  margin-bottom: 300px;
+  width: 700px;
+  margin-top: 90px;
+  margin-left: 390.75px;
+  height: 300px;
+  box-shadow: inset 0 0 10px #000;
+}
+
+.div-checkout-content-empty {
+  position: relative;
+  width: 600px;
+  height: 200px;
+  box-shadow: 0 0 5px #000;
+  margin-left: auto;
+  margin-right: auto;
+  top: 50px;
+
+}
+
+.div-checkout-two-content-empty {
+  width: 202.1px;
+  position: relative;
+  top: 83px;
+  height: 34px;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+.h3-checkout-empty {
+  color: #ff0;
+  text-shadow: 0 0 10px #cccc00;
+}
+
+.td-checkout-qty {
+    color: #ff0;
+}

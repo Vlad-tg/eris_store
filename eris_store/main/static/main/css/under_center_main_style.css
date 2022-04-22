@@ -1,0 +1,177 @@
+.div-all-category {
+    position: relative;
+    width: 100%;
+    height: 60px;
+    background: #282828;
+    box-shadow: inset 0 0 5px black, inset 0 0 10px black;
+
+}
+
+.div-all-category-two {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.div-all-category-three {
+    width: 1450px;
+
+}
+
+.test-neon--1 {
+    background-color: #ffff00;
+    box-shadow: 0 0 5px #ffff00, 0 0 30px #ffff00, 0 0 60px #ffff00;
+    width: 1481.5px;
+    height: 1px;
+    position: relative;
+
+}
+
+.computers-and-tablets-category {
+    transition: all 700ms ease 1s;
+    display: block;
+    float: left;
+}
+
+.desc {
+    position: absolute;
+    width: 100%;
+    height: 520px;
+    left: 0;
+    top: 60px;
+    visibility: hidden;
+    background-color: #fff;
+    box-shadow: 0 99999px 0 99999px rgba(0, 0, 0, 0.8);
+    transition: all 200ms linear;
+    z-index: 10;
+}
+
+.text-all-computers-and-tablets {
+    text-decoration: none;
+    top: 30px;
+    margin-left: 100px;
+    position: relative;
+    font-size: 22px;
+    color: black;
+      font-family: 'Sprite Graffiti', serif;
+}
+
+.text-all-computers-and-tablets:hover {
+    text-decoration: underline;
+    color: black;
+}
+
+.span-all-in-category {
+    position: relative;
+    top: 30px;
+    color: #1E90FF;
+    font-size: 24px;
+
+}
+
+.div-text-all-computers-and-tablets {
+    height: 100px;
+    width: 500px;
+    background: green;
+}
+
+.line-text-all-computers-and-tablets {
+    width: 80%;
+    color: black;
+    margin-top: 46px;
+    margin-left: 100px;
+}
+
+.computers-and-tablets-category:hover .desc {
+    visibility: visible;
+    transition: all 200ms linear 100ms;
+}
+
+.computers-and-tablets-category:hover .p-main-text-on-category-all-views-one {
+    text-decoration: underline;
+
+}
+
+.all-category-detail-on-filter {
+    position: relative;
+    left: 30px;
+    top: 15px;
+    float: left;
+    margin-left: 100px;
+}
+
+.laptop-on-filters {
+    position: relative;
+    text-decoration: none;
+    top: 1px;
+    font-size: 20px;
+    margin-left: 10px;
+    color: black;
+      font-family: 'Sprite Graffiti', serif;
+}
+
+.fas fa-laptop {
+    position: absolute;
+
+}
+
+.fas fa-laptop-house {
+    position: absolute;
+}
+
+.span-all-can {
+    position: absolute;
+    color: #1E90FF;
+}
+
+.laptop-on-filters:hover {
+    color: black;
+    text-decoration: underline;
+}
+
+.in-desc-category-view-all {
+    position: relative;
+    top: 15px;
+}
+
+.in-desc-category-view-all-one {
+    margin-top: 5px;
+}
+
+.in-desc-category-view {
+    left: 30px;
+    position: relative;
+    text-decoration: none;
+    font-size: 15px;
+      font-family: 'Sprite Graffiti', serif;
+}
+
+.in-desc-category-view:hover {
+    text-decoration: underline;
+}
+
+.p-main-text-on-category-all-views {
+    cursor: pointer;
+    font-family: 'Sprite Graffiti', serif;
+    color: #fffdd1;
+    text-shadow: 0 0 5px #fffdd1,
+    0 0 10px #fffdd1;
+    font-size: 14px;
+    margin-top: 23px;
+    word-spacing: 5px;
+
+}
+.p-main-text-on-category-all-views:hover {
+    text-decoration: underline;
+}
+
+.p-main-text-on-category-all-views-one {
+    cursor: pointer;
+    font-family: 'Sprite Graffiti', serif;
+    color: #fffdd1;
+    text-shadow: 0 0 5px #fffdd1,
+    0 0 10px #fffdd1;
+    font-size: 14px;
+    margin-top: 23px;
+    word-spacing: 5px;
+
+}

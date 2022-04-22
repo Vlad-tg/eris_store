@@ -1,0 +1,224 @@
+{% extends 'main/all.html' %}
+{% load static %}
+{% load specifications %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static '/main/css/base_product_style.css' %}" type="text/css"/>
+
+<!--<nav aria-label="breadcrumb" class="mt-3">-->
+<!--    <ol class="breadcrumb">-->
+<!--        <li class="breadcrumb-item"><a href="{% url 'all' %}">Home</a></li>-->
+<!--        <li class="breadcrumb-item"><a href="#">{{ product.category.name }}</a></li>-->
+<!--        <li class="breadcrumb-item active" aria-current="page">Data</li>-->
+<!--    </ol>-->
+<!--</nav>-->
+<div style="display: flex; justify-content: center; align-items: center;">
+    <div>
+        {% if request.user.is_authenticated %}
+
+        <div class="div-base-product-product-random">
+            <a href="{% url 'random_product' %}">
+                <button class="button-base-product-product-random " type="submit">RANDOM PRODUCT</button>
+            </a>
+        </div>
+
+        {% endif %}
+
+
+        {% for product in product_html %}
+        <div class="div-base-product">
+            <div class="div-base-product-two">
+                <div class="div-base-product-image">
+                    <img src="{{ product.image.url }}" class="img-base-product-image" alt="Product images">
+
+                </div>
+
+                <div class="div-base-product-title-short-description">
+                    <div class="div-base-product-title">
+                        <h4 class="h4-base-product-title">{{ product.title }}</h4>
+                        <div style="position: relative; border-radius: 5px; top: 10px; background-color: #222;
+            height: 10px; box-shadow:  0 0 5px #ff0;"></div>
+                    </div>
+                    <div class="div-base-product-short-description">
+                        <div class="div-base-product-two-short-description">
+                            <div class="div-base-product-three-short-description">
+                                <p class="p-base-product-short-description">OPERATING SYSTEM: <span
+                                        style="color: #FFD700">
+                            {{ product.operating_system }}</span>
+                                </p>
+                                <p class="p-base-product-short-description">RESOLUTION: <span style="color: #FFD700">
+                            {{ product.resolution }}</span>
+                                </p>
+                                <p class="p-base-product-short-description">GRAPHICS: <span style="color: #FFD700">
+                            {{ product.graphics }}</span>
+                                </p>
+                                <p class="p-base-product-short-description">PROCESSOR: <span style="color: #FFD700">
+                            {{ product.processor }}</span>
+                                </p>
+
+                                <div class="div-base-product-more-information">
+                                    <div class="div-account-base-product-more-information">
+                                        <a class="a-base-product-more-information"
+                                           href="#div-base-product-full-information">More
+                                            information</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="div-base-product-menu-left">
+                        <div class="div-base-product-two-menu-left">
+                            {% include 'main/rating_star.html' %}
+                            <div class="div-base-product-price">
+                                <h4 class="p-base-product-price">{{ product.price }} $</h4>
+                            </div>
+                            <div class="div-base-product-add-to-cart">
+                                <a href="{% url 'add_to_cart' slug=product.slug %}">
+                                    <button class="button-base-product-add-to-cart">ADD TO CART</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="div-base-product-description">
+                <div class="div-base-product-two-description">
+                    <div class="div-base-product-three-description">
+                        <h4 class="h4-base-product-description">DESCRIPTION</h4>
+                        <p class="p-base-product-description">{{ product.description }}</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="div-base-product-full-information" id="div-base-product-full-information">
+                <div class="div-base-product-two-full-information">
+                    <div class="div-base-product-three-full-information">
+                        <h4 class="h4-base-product-full-information">SPECIFICATION</h4>
+                        {% for products in product_html %}
+                        {% if products.category_id == 1 %}
+                        <table class="table-base-product-full-information">
+                            <tbody>
+                            <tr>
+                                <td class="td-base-product-name"
+                                    style="color: #ff0; font-family: 'Sprite Graffiti', serif;">By series:
+                                </td>
+                                <td class="td-base-product-value"
+                                    style="color: #cccc00; font-family: 'Sprite Graffiti', serif;">{{ products.by_series }}
+                                    <hr class="div-base-product-line">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="td-base-product-name"
+                                    style="color: #ff0; font-family: 'Sprite Graffiti', serif;">
+                                    Operating system:
+                                </td>
+                                <td class="td-base-product-value"
+                                    style="color: #cccc00; font-family: 'Sprite Graffiti', serif;">
+                                    {{ products.operating_system }}
+                                    <hr class="div-base-product-line">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="td-base-product-name"
+                                    style="color: #ff0; font-family: 'Sprite Graffiti', serif;">
+                                    Screen size:
+                                </td>
+                                <td class="td-base-product-value"
+                                    style="color: #cccc00; font-family: 'Sprite Graffiti', serif;">
+                                    {{ products.screen_size }}
+                                    <hr class="div-base-product-line">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="td-base-product-name"
+                                    style="color: #ff0; font-family: 'Sprite Graffiti', serif;">
+                                    Resolution:
+                                </td>
+                                <td class="td-base-product-value"
+                                    style="color: #cccc00; font-family: 'Sprite Graffiti', serif;">{{ products.resolution }}
+                                    <hr class="div-base-product-line">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="td-base-product-name"
+                                    style="color: #ff0; font-family: 'Sprite Graffiti', serif;">
+                                    Storage drive size:
+                                </td>
+                                <td class="td-base-product-value"
+                                    style="color: #cccc00; font-family: 'Sprite Graffiti', serif;">
+                                    {{ products.storage_drive_size }}
+                                    <hr class="div-base-product-line">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="td-base-product-name"
+                                    style="color: #ff0; font-family: 'Sprite Graffiti', serif;">
+                                    Processor:
+                                </td>
+                                <td class="td-base-product-value"
+                                    style="color: #cccc00; font-family: 'Sprite Graffiti', serif;">{{ products.processor }}
+                                    <hr class="div-base-product-line">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="td-base-product-name"
+                                    style="color: #ff0; font-family: 'Sprite Graffiti', serif;">
+                                    RAM:
+                                </td>
+                                <td class="td-base-product-value"
+                                    style="color: #cccc00; font-family: 'Sprite Graffiti', serif;">{{ products.ram }}
+                                    <hr class="div-base-product-line">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="td-base-product-name"
+                                    style="color: #ff0; font-family: 'Sprite Graffiti', serif;">
+                                    Graphics:
+                                </td>
+                                <td class="td-base-product-value"
+                                    style="color: #cccc00; font-family: 'Sprite Graffiti', serif;">{{ products.graphics }}
+                                    <hr class="div-base-product-line">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="td-base-product-name"
+                                    style="color: #ff0; font-family: 'Sprite Graffiti', serif;">
+                                    Touch:
+                                </td>
+                                <td class="td-base-product-value"
+                                    style="color: #cccc00; font-family: 'Sprite Graffiti', serif;">{{ products.touch }}
+                                    <hr class="div-base-product-line">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="td-base-product-name"
+                                    style="color: #ff0; font-family: 'Sprite Graffiti', serif;">
+                                    Battery charge:
+                                </td>
+                                <td class="td-base-product-value"
+                                    style="color: #cccc00; font-family: 'Sprite Graffiti', serif;">
+                                    {{ products.battery_charge }}
+                                    <hr class="div-base-product-line">
+                                </td>
+                            </tr>
+
+
+                            </tbody>
+                        </table>
+
+                        {% endif %}
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            {% include 'main/blog_comment.html' %}
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock %}

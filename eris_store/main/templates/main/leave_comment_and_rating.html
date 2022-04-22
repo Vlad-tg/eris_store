@@ -1,0 +1,69 @@
+{% extends 'main/all.html' %}
+{% load static %}
+{% load specifications %}
+
+{% block content %}
+{% if user.is_authenticated %}
+{% for product in product_html %}
+<link rel="stylesheet" href="{% static '/main/css/leave_comment_and_rating_style.css' %}" type="text/css"/>
+<div style="display: flex; justify-content: center; align-items: center;">
+    <div class="div-leave-comment">
+        <div class="div-leave-comment-two">
+            <div class="div-leave-comment-form">
+                <form name="rating" action="{% url 'add_rating' %}" method="post">
+                    <h3 style="color: #ff0; text-shadow: 0 0 5px #ff0; text-align: center;
+                font-family: 'Sprite Graffiti', serif;
+                position: relative; top: 20px;">LEAVE COMMENT AND ASSESSMENT
+                    </h3>
+                    {% csrf_token %}
+                    <input type="hidden" name="product_id" value="{{ product.id }}">
+                    <b style="color: #ff0; text-shadow: 0 0 5px #000; margin-left: 18px;
+                 font-family: 'Sprite Graffiti', serif;">ASSESSMENT:</b>
+                    <span class="rating">
+                                {% for k, v in star_form.fields.star.choices %}
+                                    <input id="rating{{ v }}" type="radio" name="star"
+                                           value="{{ k }}">
+                                    <label for="rating{{ v }}">{{ k }}</label>
+                                {% endfor %}
+                            </span>
+
+                </form>
+
+                <form class="form-leave-send-comment" action="{% url 'send_comment' %}" method="post">
+                    {% csrf_token %}
+                    <input type="hidden" name="product_id" value="{{ product.id }}">
+                    <input class="input-leave-form-text" id="input-leave-form-text-id" type="text" name="comment"
+                           placeholder="Enter comment here">
+
+                    <input type="hidden" name="parent_sno" value="">
+                    <input class="input-leave-form-submit" type="submit" value="Submit">
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+
+    const rating = document.querySelector('form[name=rating]');
+
+    rating.addEventListener("change", function (e) {
+
+        let data = new FormData(this);
+        fetch(`${this.action}`, {
+            method: 'POST',
+            body: data
+        })
+            .then(response => console.log(response))
+            .then(success => console.log(success))
+            .catch(error => console.log(error))
+    });
+
+
+
+
+
+</script>
+{% endfor %}
+{% endif %}
+
+{% endblock %}

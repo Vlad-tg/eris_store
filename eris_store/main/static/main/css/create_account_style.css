@@ -1,0 +1,114 @@
+.div-create-account {
+    height: 1050px;
+    width: 1200px;
+    margin-top: 30px;
+    background: #222;
+    box-shadow: inset 0 0 10px #000;
+
+}
+
+.div-create-account-form {
+    position: relative;
+    top: 75px;
+    margin-right: auto;
+    margin-left: auto;
+    height: 900px;
+    width: 540px;
+    box-shadow:  0 0 5px #000;
+
+}
+
+.div-create-account-two-form {
+    position: relative;
+    top: 35px;
+    margin-right: auto;
+    margin-left: auto;
+    height: 835px;
+
+    width: 450px;
+    font-family: 'Sprite Graffiti', serif;
+
+
+
+}
+
+.div-create-account-three-form {
+
+    margin-top: 40px;
+
+}
+
+.button-create-account-form {
+
+    font-size: 100%;
+    font-family: 'Sprite Graffiti', serif;
+    background: #222;
+    border: solid 1px #ffff00;
+    box-shadow: 0 0 5px #ffff00;
+    position: relative;
+    height: 35px;
+    top: 27px;
+    left: 10px;
+    color: #ff0;
+    text-shadow: 0 0 5px #000;
+    border-radius: 5px;
+}
+
+.button-create-account-form:hover {
+  background: #333;
+}
+
+.form-group {
+    margin-top: 25px;
+
+
+}
+
+
+
+.text-muted {
+    color: #FFD700!important;
+    text-shadow: 0 0 5px #000;
+    top: 5px!important;
+    position: relative;
+    left: 10px;
+}
+.textinput {
+    background: #222!important;
+    border-color: #000!important;
+    box-shadow: inset 0 0 5px #000!important;
+    color: #cccc00!important;
+
+
+}
+
+.textinput:-webkit-autofill {
+    border: solid 2px #000!important;
+}
+.textinput:focus {
+    box-shadow: 0 0 5px rgba(255, 255, 0, 0.2), inset 0 0 20px rgba(255, 255, 0, 0.1)!important;
+    border-color: #FFFF00!important;
+    background: #222!important;
+    animation: flashing_create_account 800ms ease-out infinite alternate!important;
+}
+
+/*.textinput::-webkit-input-placeholder {*/
+/*    color: #fefec9;*/
+/*}*/
+.captchaanswerinput {
+    background: #222!important;
+    border-color: #000!important;
+    box-shadow: inset 0 0 5px #000!important;
+    color: #cccc00!important;
+    margin-top: 10px;
+}
+
+.captchaanswerinput:-webkit-autofill {
+    border: solid 2px #000!important;
+}
+.captchaanswerinput:focus {
+    box-shadow: 0 0 5px rgba(255, 255, 0, 0.2), inset 0 0 20px rgba(255, 255, 0, 0.1)!important;
+    border-color: #FFFF00!important;
+    background: #222!important;
+    animation: flashing_create_account 800ms ease-out infinite alternate!important;
+}

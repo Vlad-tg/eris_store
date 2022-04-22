@@ -1,0 +1,15 @@
+{% extends 'main/all.html' %}
+{% load static %}
+{% block content %}
+{% for random in random_product %}
+<div style="box-shadow: 0 0 10px #000; height: 300px; width: 300px; ">
+
+    <img style="height: 50px; width: 50px;" src="{{ random.image.url }}">
+    <p style="color: #ff0;">{{ random.title }}</p>
+
+</div>
+{% endfor %}
+<a href="{% url 'random_product_erma' %}">
+<button type="submit">Random product</button>
+</a>
+{% endblock %}

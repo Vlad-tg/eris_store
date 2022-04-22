@@ -1,0 +1,25 @@
+{% extends 'main/all.html' %}
+{% load specifications %}
+{% block content %}
+
+<div class="row">
+           {% for laptop in category_products %}
+          <div class="col-lg-4 col-md-6 mb-4" data-category="{{ video.name }}">
+            <div class="card h-100">
+              <a href="{{ laptop.get_absolute_url }}"><img class="card-img-top" src="{{ laptop.image.url }}" alt=""></a>
+              <div class="card-body">
+                <h4 class="card-title">
+                  <a href="{{ laptop.get_absolute_url }}">{{ laptop.title }}</a>
+                </h4>
+                <h5>{{ laptop.price }} $</h5>
+                  <a  href="{% url 'add_to_cart' slug=laptop.slug %}">
+                      <button class="btn btn-danger">Add to cart</button></a>
+              </div>
+            </div>
+            </div>
+</div>
+{% endfor %}
+
+
+{% endblock %}
+

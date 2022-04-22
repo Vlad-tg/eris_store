@@ -1,0 +1,323 @@
+.div-account {
+    height: 900px;
+    width: 1200px;
+    margin-top: 30px;
+    background: #222;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 0 10px #000;
+
+}
+.div-account-line-left {
+    position: absolute;
+    height: 800px;
+    width: 2px;
+    background: #ff0;
+    box-shadow: 0 0 4px #ff0;
+    margin-left: 50px;
+    margin-top: 50px;
+
+}
+
+.div-account-line-right {
+    position: absolute;
+    height: 800px;
+    width: 2px;
+    background: #ff0;
+    box-shadow: 0 0 4px #ff0;
+    margin-left: 1150px;
+    margin-top: 50px;
+}
+
+.img-sequence {
+    height: 200px;
+    width: 1200px;
+
+    margin-top: 30px;
+    border: solid 3px #000;
+    filter: drop-shadow(0 0 10px #000);
+
+}
+.img-icon {
+    height: 150px;
+    width: 150px;
+    filter: drop-shadow(0 0 10px #cccc00);
+    border-radius: 50%;
+}
+.div-icon-customer {
+    margin-right: auto;
+    margin-left: auto;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+}
+.div-icon {
+    position: relative;
+    height: 200px;
+    width: 200px;
+    margin-left: 150px;
+    top: 50px;
+    box-shadow: inset 0 0 10px #000;
+    border-radius: 50%;
+    padding-top: 25px;
+}
+
+.h1-text-account {
+    font-size: 250%;
+    font-weight: 900;
+    font-family: 'Sprite Graffiti', serif;
+    background-color: #000;
+    color: transparent;
+    text-shadow: 2px 2px 3px #222;
+    -webkit-background-clip: text;
+}
+.div-account-line {
+    height: 2px;
+    width: 500px;
+    background: #ff0;
+    box-shadow: 0 0 4px #ff0;
+}
+
+.div-account-change-icon-and-sequence {
+    top: 20px;
+    height: 30px;
+    width: 300px;
+
+    position: relative;
+
+}
+
+.div-account-two-change-icon {
+    height: 25px;
+    width: 100px;
+    border: solid 1px #000;
+    box-shadow: inset 0 0 5px #000;
+    background: #222;
+
+
+}
+
+.div-account-three-change-icon {
+    height: 25px;
+    width: 80px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.a-account-change-icon {
+    color: #FFD700;
+    text-decoration: none;
+    text-shadow: 0 0 5px #000;
+    font-size: 90%;
+}
+
+.a-account-change-icon:hover {
+    color: #FFD700;
+    text-shadow: 0 0 2px #000;
+    text-decoration: underline;
+}
+
+.div-account-two-change-sequence {
+    height: 25px;
+    width: 140px;
+    border: solid 1px #000;
+    box-shadow: inset 0 0 5px #000;
+    background: #222;
+    position: relative;
+    left: 110px;
+    top: -25px;
+
+}
+
+.div-account-three-change-sequence {
+    height: 25px;
+    width: 115px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.a-account-change-sequence {
+    color: #FFD700;
+    text-decoration: none;
+    text-shadow: 0 0 5px #000;
+    font-size: 90%;
+}
+
+.a-account-change-sequence:hover {
+    color: #FFD700;
+    text-shadow: 0 0 2px #000;
+    text-decoration: underline;
+}
+
+.h3-account-customer-information {
+    margin-top: -160px;
+    margin-left: 150px;
+    margin-bottom: 30px;
+    color: #ff0;
+    text-shadow: 0 0 4px #ffff00;
+    font-family: 'Sprite Graffiti', serif;
+
+}
+
+.div-account-information {
+    position: relative;
+    height: 400px;
+    width: 500px;
+    margin-left: 150px;
+    box-shadow: inset 0 0 10px #000;
+}
+.div-account-two-information {
+    position: relative;
+    height: 350px;
+    width: 450px;
+    top: 25px;
+    margin-left: 25px;
+    padding-left: 50px;
+    padding-top: 25px;
+    box-shadow: 0 0 10px #000;
+}
+
+.div-account-three-information {
+    height: 300px;
+    width: 300px;
+
+}
+
+.p-account-information-text {
+    color: #FFD700;
+    text-shadow: 0 0 4px #ffff00;
+    font-family: 'Sprite Graffiti', serif;
+    margin-bottom: 5px;
+
+}
+.span-account-information-text {
+    color: #cccc00;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 300px;
+    font-family: 'Sprite Graffiti', serif;
+    text-shadow: 0 0 4px #000;
+
+}
+
+.div-account-change-information {
+    height: 25px;
+    width: 150px;
+    border: solid 1px #000;
+    box-shadow: inset 0 0 5px #000;
+    background: #222;
+
+}
+
+.div-account-two-change-information {
+    height: 25px;
+    width: 130px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.a-account-change-information {
+    color: #FFD700;
+    text-decoration: none;
+
+    text-shadow: 0 0 5px #000;
+    font-size: 90%;
+
+}
+.a-account-change-information:hover {
+    color: #FFD700;
+    text-shadow: 0 0 2px #000;
+    text-decoration: underline;
+
+}
+
+.div-account-menu-customer {
+    height: 400px;
+    width: 250px;
+    box-shadow: inset 0 0 10px #000;
+    position: relative;
+    top: -600px;
+    margin-left: 800px;
+    padding-top: 30px;
+}
+
+.a-account-menu-random {
+    color: #FFD700;
+    text-shadow: 0 0 10px #000;
+    font-family: 'Sprite Graffiti', serif;
+    text-decoration: none;
+    margin-left: 30px;
+
+
+}
+
+.a-account-menu-random:hover {
+    text-decoration: underline;
+    color: #FFD700;
+}
+
+.a-account-menu-random-for-erma {
+    color: #FFD700;
+    text-shadow: 0 0 10px #000;
+    font-family: 'Sprite Graffiti', serif;
+    text-decoration: none;
+    margin-left: 30px;
+
+
+}
+
+.a-account-menu-random-for-erma:hover {
+    text-decoration: underline;
+    color: #FFD700;
+}
+
+.div-account-information-cart-order {
+    height: 200px;
+    width: 250px;
+    box-shadow: inset 0 0 10px #000;
+    position: relative;
+    top: -550px;
+
+    margin-left: 800px;
+}
+
+.div-account-change-color {
+    position: relative;
+    top: 30px;
+    height: 40px;
+    width: 300px;
+
+    border-radius: 5px;
+}
+.button-account-change-color-yellow {
+    height: 40px;
+    width: 40px;
+    background: #ff0;
+    border: solid 1px #000;
+    box-shadow: 0 0 5px #000;
+    border-radius: 5px;
+}
+.button-account-change-color-red {
+    height: 40px;
+    width: 40px;
+    background: #f00;
+    border: solid 1px #000;
+    box-shadow: 0 0 5px #000;
+    border-radius: 5px;
+    margin-left: 10px;
+
+}
+
+.a-account-change-inf-sequence-icon-yellow:hover {
+    text-shadow: 0 0 2px #FFD700;
+
+}
+
+.a-account-change-inf-sequence-icon-red:hover {
+    text-shadow: 0 0 2px #D10000;
+}
+
+
+
+

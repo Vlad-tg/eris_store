@@ -1,0 +1,230 @@
+.div-all-filter-and-product-laptop {
+
+}
+.div-product-all {
+  position: relative;
+  margin-top: -2230px;
+  margin-left: 170px;
+  height: 3690px;
+}
+
+.product-content-all {
+  margin-top: 10px;
+  height: 450px;
+  width: 550px;
+  background-color: #222;
+
+  box-shadow: 0 0 5px #000, 0 0 10px #000, 0 0 15px #000;
+
+}
+
+
+.img-product-picture {
+  height: 190px;
+  width: 210px;
+  filter: drop-shadow(0 0 5px #000);
+
+}
+
+.div-product-picture {
+  height: 190px;
+  width: 210px;
+  margin-left: 30px;
+
+  padding-top: 120px;
+  z-index: 1;
+}
+
+.div-product-title {
+  margin-left: auto;
+  margin-right: auto;
+
+  margin-top: -150px;
+  height: 60px;
+  width: 500px;
+  border-bottom: solid 1px #FFD700;
+}
+
+.p-product-title {
+  font-size: 105%;
+  color: #ffff00;
+  word-break: break-all;
+  text-shadow: 0 0 5px black;
+  font-family: 'Sprite Graffiti', serif;
+  text-decoration: none;
+}
+
+.div-product-description {
+  float: right;
+  margin-right: 30px;
+  margin-top: 40px;
+  height: 180px;
+  width: 250px;
+}
+
+.p-product-description {
+  text-shadow: 0 0 5px black;
+  font-family: 'Sprite Graffiti', serif;
+  font-size: 80%;
+  color: #ffff00;
+
+}
+
+.div-product-price {
+  padding-top: -5px;
+  height: 30px;
+  width: 90px;
+
+}
+
+.p-product-price {
+  font-size: 150%;
+  color: #FFD700;
+  text-shadow: 0 0 5px black;
+  font-family: 'Sprite Graffiti', serif;
+  text-decoration: none;
+}
+
+.div-product-cart {
+  float: right;
+  margin-top: -30px;
+}
+
+.div-product-price-and-cart {
+  margin-top: 250px;
+  height: 40px;
+  width: 180px;
+  float: right;
+  margin-right: -190px;
+
+}
+
+.button-product-cart {
+  height: 40px;
+  width: 50px;
+  border-radius: 5px;
+  background-color: #ffff00;
+  box-shadow: 0 0 5px #ffff00;
+  border: solid 2px #cc0;
+  transition: color 500ms linear, background 300ms linear;
+
+}
+
+.button-product-cart:hover {
+  height: 40px;
+  width: 50px;
+  border-radius: 5px;
+  background-color: #a3a21b;
+  box-shadow: 0 0 5px #ffff00;
+  border: solid 2px #cc0;
+  color: #ffff00;
+
+}
+
+
+.div-main-filter-laptop {
+  height: 270px;
+  width: 300px;
+  border-right: solid 1px #ffff00;
+  box-shadow: 5px 0 5px -5px #ffff00, 10px 0 10px -10px #ffff00;
+  display: none;
+
+}
+
+
+.label-name-filter-laptop {
+  font-size: 100%;
+  color: #FFD700;
+  text-shadow: 0 0 5px black;
+  font-family: 'Sprite Graffiti', serif;
+  margin-left: 20px;
+  margin-top: -19.5px;
+  cursor: pointer;
+}
+
+.div-checkbox-filter-laptop {
+  margin-top: -10px;
+}
+
+.input-checkbox-filter-laptop {
+
+  border: none;
+  background-color: #ffff00;
+  height: 15px;
+  width: 15px;
+  box-shadow: 0 0 5px #000, 0 0 10px #000;
+  z-index: 5;
+}
+
+.p-title-filter-laptop {
+  color: #ffff00;
+  padding-top: 5px;
+  text-shadow: 0 0 5px #ffff00;
+  margin-left: 35px;
+  margin-top: -25px;
+
+}
+
+.div-title-filter-laptop {
+  height: 50px;
+  width: 300px;
+
+  border-right: solid 1px #ffff00;
+  box-shadow: 5px 0 5px -5px #ffff00, 10px 0 10px -10px #ffff00;
+
+
+}
+
+.ul-checkbox-filter-laptop {
+  padding-top: 30px;
+}
+
+.button-hide-filter-laptop {
+  border: none;
+  background: none;
+  margin-top: 20px;
+  margin-left: 10px;
+  filter: drop-shadow(0 0 5px #ffff00);
+}
+
+.img-hide-filter-laptop {
+  height: 12px;
+  width: 15px;
+  filter: drop-shadow(0 0 5px #ffff00);
+}
+
+.button-hide-filter-laptop:focus {
+  outline: none;
+}
+
+
+.button-show-filter-laptop {
+  height: 40px;
+  width: 80px;
+  border-radius: 5px;
+  background-color: #ffff00;
+  box-shadow: 0 0 5px #ffff00;
+  border: solid 2px #cc0;
+  color: #cc0;
+  font-family: 'Sprite Graffiti', serif;
+  font-weight: 900;
+  margin-left: 220px;
+  margin-top: 10px;
+
+}
+
+.button-show-filter-laptop:hover {
+  background: #cc0;
+  color: #444;
+  transition: all 200ms ease;
+
+}
+
+.button-show-filter-laptop:focus {
+  outline: none;
+}
+
+
+
+
+

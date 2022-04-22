@@ -1,0 +1,61 @@
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static '/main/css/main_slider.css' %}" type="text/css">
+</head>
+
+<body>
+
+    <section class="home">
+        <div class="main-slider-on-home-page">
+            <div class="slide active">
+                <div class="canvas-one">
+                    <div>
+                    <div class="div-text-on-slider-left">
+                        <h4 class="h5-text-main-name-slider">SUPER PROMOTION FOR THE HOLIDAYS</h4>
+                        <h4 class="p-text-description">UP TO 30% DISCOUNT ON MOST LAPTOPS</h4>
+                        <p class="p-text-on-carousel">CHOOSE WHAT YOU NEED:</p>
+                        <button class="button-show-more">SHOW MORE</button>
+                    </div>
+                    <div class="div-text-on-slider-right">
+                        <h1 class="h1-text-main-name-slider-right">SCALE NEW HEIGHTS</h1>
+                        <h3 class="h3-text-description-right">SHOW WHAT YOU ARE CAPABLE OF WITH A NEW LAPTOP</h3>
+                    </div>
+                        <img style="margin-left: 800px; height: 150px; width: 500px;" src="/static/main/images/laptop-on-carousel.png">
+                        {% include 'main/carousel_in_slider.html' %}
+                        </div>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="canvas-one"></div>
+            </div>
+            <div class="slide">
+                <div class="canvas-one"></div>
+            </div>
+        </div>
+
+        <div class="controls">
+
+            <div class="prev"><</div>
+            <div class="next">></div>
+
+        </div>
+
+        <div class="indicator">
+        </div>
+    </section>
+
+
+</body>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
+<script src="static/main/js/main_slider.js"></script>
+</html>

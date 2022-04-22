@@ -1,0 +1,81 @@
+.form-search {
+    margin-left: 700px;
+    margin-top: 100px;
+    height: 40px;
+    width: 535px;
+}
+
+.input-search {
+    width: 270px;
+    height: 40px;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-right: none;
+    outline: none;
+    padding-left: 5px;
+
+}
+
+.div-search-category {
+    float: right;
+    margin-top: -38.2px;
+    margin-right: 175px;
+}
+
+
+.select-search-category {
+    width: 90px;
+    height: 36.8px;
+    outline: solid 2px black;
+    border: none;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding-left: 5px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+
+}
+
+
+.div-click-search-price {
+    float: right;
+    margin-top: -40px;
+    margin-right: 74px;
+    z-index: 2;
+}
+
+.button-click-search-price {
+    width: 100px;
+    height: 40px;
+    border-radius: 5px;
+    background: none;
+    cursor: pointer;
+}
+
+.div-search-price-both-max-min {
+    display: none;
+    height: 50px;
+    width: 157px;
+    background: white;
+    border: solid 1px black;
+    position: absolute;
+    top: 46px;
+    margin-left: 304px;
+}
+
+.div-search-submit {
+    float: right;
+    margin-right: 2px;
+    margin-top: -40px;
+
+}
+
+.button-search-submit {
+    width: 70px;
+    height: 40px;
+    cursor: pointer;
+    background: none;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}

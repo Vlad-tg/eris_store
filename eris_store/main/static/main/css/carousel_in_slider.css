@@ -1,0 +1,221 @@
+
+.carousel-in-slider {
+    left: 100px;
+    top: 210px;
+    height: 320px;
+    width: 480px;
+    overflow: hidden;
+    position: absolute;
+}
+
+.carousel-in-slider .slide-zero-one {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    z-index: 1;
+    display: none;
+
+
+}
+
+.carousel-in-slider .slide-zero-one.active {
+    display: flex;
+}
+
+
+.carousel-in-slider .controls-zero-one .prev-zero-one,
+.carousel-in-slider .controls-zero-one .next-zero-one {
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    height: 60px;
+    width: 40px;
+    margin-top: -20px;
+    color: #ffff00;
+    background-color: rgb(0, 0, 0);
+    text-align: center;
+    line-height: 60px;
+    border-radius: 5px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all .5s ease;
+
+
+}
+
+.prev-zero-one {
+    display: none;
+}
+
+.carousel-in-slider .controls-zero-one .prev-zero-one:hover,
+.carousel-in-slider .controls-zero-one .next-zero-one:hover {
+    background-color: #000000;
+}
+
+.carousel-in-slider .controls-zero-one .prev-zero-one {
+    left: 0;
+}
+
+.carousel-in-slider .controls-zero-one .next-zero-one {
+    right: 0;
+}
+
+@media (max-width: 767px) {
+    .controls-zero-one {
+        display: none;
+    }
+}
+
+.slid-product {
+    height: 320px;
+    width: 480px;
+    background: transparent;
+    z-index: -1;
+}
+
+.slid-product-laptop-one {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    height: 300px;
+    width: 220px;
+    background: #1D1D1D;
+    box-shadow: 0 0 5px #000, 0 0 10px #000, 0 0 15px #000;
+    z-index: 2;
+}
+
+
+.slid-product-laptop-two {
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    height: 300px;
+    width: 220px;
+    background: #1D1D1D;
+    box-shadow: 0 0 5px #000, 0 0 10px #000, 0 0 15px #000;
+    z-index: 2;
+}
+
+.img-product-laptop-sale {
+    filter: drop-shadow(0 0 5px #000);
+    height: 120px;
+    width: 180px;
+}
+
+.img-div-product-laptop-sale {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 35px;
+    height: 120px;
+    width: 180px;
+    z-index: 1;
+}
+
+
+.div-text-product-laptop-sale {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    height: 50px;
+    width: 180px;
+}
+
+.p-text-product-laptop-sale {
+    font-size: 70%;
+    color: #ffff00;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    text-shadow: 0 0 5px black;
+    font-family: 'Sprite Graffiti', serif;
+}
+
+.div-text-product-laptop-sale-all-price {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -25px;
+    height: 50px;
+    width: 160px;
+    font-family: 'Sprite Graffiti', serif;
+}
+
+.p-product-laptop-sale-price {
+    color: red;
+    text-shadow: 0 0 5px black;
+    float: left;
+
+}
+
+.div-product-laptop-main-price {
+    padding-top: 10px;
+}
+
+.div-save-product-laptop-sale {
+    position: absolute;
+    top: 20px;
+    height: 20px;
+    width: 100px;
+    background-color: #ffff00;
+    border-radius: 5px;
+    font-size: 85%;
+    text-align: center;
+    z-index: 3;
+    box-shadow: 0 0 5px #ffff00;
+    font-family: 'Sprite Graffiti', serif;
+    font-weight: 900;
+    color: #555;
+}
+
+.div-offer-product-laptop-sale {
+    position: absolute;
+    top: 50px;
+    left: 40px;
+    height: 15px;
+    width: 80px;
+    background-color: red;
+    border-radius: 5px;
+    font-size: 65%;
+    text-align: center;
+    z-index: 3;
+    box-shadow: 0 0 5px red;
+    font-family: 'Sprite Graffiti', serif;
+    font-weight: 900;
+    color: #333;
+
+}
+
+.p-product-laptop-main-price {
+    font-size: 70%;
+    color: #ffff00;
+    text-shadow: 0 0 5px #000;
+    display: inline;
+    margin-left: 10px;
+    text-decoration: line-through;
+    text-decoration-color: #000;
+
+}
+
+.div-text-product-laptop-sale-installment {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -10px;
+    height: 50px;
+    width: 180px;
+    font-family: 'Sprite Graffiti', serif;
+}
+
+.p-text-product-laptop-sale-installment {
+    font-size: 60%;
+    color: #ffff00;
+    text-shadow: 0 0 5px #000;
+
+}
+
+.span-text-product-laptop-sale-installment {
+    color: red;
+    text-shadow: 0 0 5px #000;
+
+}
+
+{% if forloop.counter|divisibleby: 2 %}

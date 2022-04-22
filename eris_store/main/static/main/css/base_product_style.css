@@ -1,0 +1,301 @@
+.div-base-product {
+    width: 1300px;
+    height: 2150px;
+    margin-top: 70px;
+    box-shadow: 0 0 10px #000;
+
+}
+
+.div-base-product-image {
+    position: relative;
+    margin-left: 82px;
+    top: 60px;
+    width: 400px;
+    height: 400px;
+    box-shadow: inset 0 0 15px #000;
+    border-radius: 10px;
+}
+
+.div-base-product-title-short-description {
+    margin-left: 540px;
+    top: -305px;
+    position: relative;
+}
+
+
+.img-base-product-image {
+    position: relative;
+    top: 50px;
+    margin-left: 50px;
+    height: 300px;
+    width: 300px;
+    filter: drop-shadow(0 0 15px #000);
+}
+
+.div-base-product-title {
+
+    height: 100px;
+    width: 678px;
+
+
+}
+
+.h4-base-product-title {
+    color: #ff0;
+    font-family: 'Sprite Graffiti', serif;
+    text-shadow: 0 0 5px #ff0;
+}
+
+.p-base-product-short-description {
+    text-shadow: 0 0 5px black;
+    font-family: 'Sprite Graffiti', serif;
+    font-size: 95%;
+    color: #ffff00;
+}
+
+
+.div-base-product-short-description {
+    margin-left: 50px;
+    margin-top: 50px;
+}
+
+
+
+
+.div-base-product-more-information {
+    height: 25px;
+    width: 150px;
+    border: solid 1px #000;
+    box-shadow: inset 0 0 5px #000;
+    background: #222;
+
+}
+
+.div-account-base-product-more-information {
+    height: 25px;
+    width: 112.5px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.a-base-product-more-information {
+    color: #FFD700;
+    text-decoration: none;
+    text-shadow: 0 0 5px #000;
+    font-size: 90%;
+}
+.a-base-product-more-information:hover {
+    color: #FFD700;
+    text-shadow: 0 0 2px #000;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.div-base-product-short-description {
+    box-shadow: inset 0 0 10px #000;
+    width: 400px;
+    height: 300px;
+    margin-left: -10px;
+    margin-bottom: -1px;
+
+}
+
+.div-base-product-two-short-description {
+    box-shadow: 0 0 10px #000;
+    top: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 350px;
+    position: relative;
+    height: 250px;
+}
+
+.div-base-product-three-short-description {
+    top: 35px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 300px;
+    position: relative;
+    height: 200px;
+}
+
+
+
+
+
+.div-base-product-full-information {
+    box-shadow: inset 0 0 10px #000000;
+    width: 1100px;
+    height: 800px;
+    margin-left: 100px;
+    margin-top: 100px;
+}
+
+.div-base-product-two-full-information {
+    box-shadow: 0 0 10px #000000;
+    width: 1000px;
+    height: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    top: 50px;
+}
+
+.div-base-product-three-full-information {
+    width: 800px;
+    margin-right: auto;
+    margin-left: auto;
+    height: 350px;
+}
+
+.table-base-product-full-information {
+    width: 800px;
+    margin-top: 65px;
+}
+
+.div-base-product-line {
+    margin-top: 10px;
+    background-color: #FFD700;
+}
+
+.h4-base-product-full-information {
+    text-align: center;
+    color: #ff0;
+    text-shadow: 0 0 5px #ff0;
+    padding-top: 50px;
+    font-family: 'Sprite Graffiti', serif;
+}
+
+
+
+
+.div-base-product-description {
+    box-shadow: inset 0 0 10px #000;
+    width: 1200px;
+    height: 400px;
+    margin-left: 50px;
+}
+
+.div-base-product-two-description {
+    box-shadow: 0 0 10px #000;
+    width: 1118.5px;
+    height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    top: 50px;
+
+}
+
+.div-base-product-three-description {
+    width: 1050px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.h4-base-product-description {
+    color: #ff0;
+    text-shadow: 0 0 5px #ff0;
+    text-align: center;
+    padding-top: 30px;
+    font-family: 'Sprite Graffiti', serif;
+
+}
+
+.p-base-product-description {
+    color: #cccc00;
+    text-align: center;
+    margin-top: 15px;
+    font-family: 'Sprite Graffiti', serif;
+}
+
+.div-base-product-menu-left {
+    position: relative;
+    height: 300px;
+    width: 300px;
+    margin-bottom: -450px;
+    top: -300px;
+
+    margin-left: 400px;
+    box-shadow: inset 0 0 10px #000;
+
+
+}
+
+.div-base-product-two-menu-left {
+    height: 250px;
+    width: 250px;
+    padding-top: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    top: 25px;
+    position: relative;
+    box-shadow: 0 0 10px #000;
+}
+
+.div-base-product-price {
+    position: relative;
+    top: 80px;
+    margin-left: 20px;
+
+}
+
+.p-base-product-price {
+    color: #cccc00;
+    text-shadow: 0 0 5px #000;
+    font-family: 'Sprite Graffiti', serif;
+}
+
+.div-base-product-add-to-cart {
+    margin-left: 130px;
+    top: 30px;
+    position: relative;
+}
+
+.button-base-product-add-to-cart {
+    border: solid 1px #ff0;
+    height: 50px;
+    box-shadow: 0 0 5px #ff0;
+    background: #222;
+    color: #ff0;
+    width: 100px;
+    font-family: 'Sprite Graffiti', serif;
+    border-radius: 5px;
+    font-size: 79%;
+}
+
+
+.button-base-product-add-to-cart:hover {
+    background: #333;
+}
+
+.td-base-product-value {
+    position: relative;
+    top: 10px;
+
+}
+
+.div-base-product-product-random {
+    margin-left: 90%;
+    top: 35px;
+    position: relative;
+}
+
+.button-base-product-product-random {
+    border: solid 1px #ff0;
+    height: 50px;
+    box-shadow: 0 0 5px #ff0;
+    background: #222;
+    color: #ff0;
+    width: 100px;
+    font-family: 'Sprite Graffiti', serif;
+    border-radius: 5px;
+    font-size: 79%;
+}
+
+
+.button-base-product-product-random:hover {
+    background: #333;
+}
+
+

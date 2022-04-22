@@ -1,0 +1,287 @@
+{% extends 'main/all.html' %}
+{% load static %}
+
+
+{% block content %}
+{% if request.user.is_authenticated %}
+<link rel="stylesheet" href="{% static '/main/css/account_style.css' %}" type="text/css"/>
+<style>
+    .div-account-sequence {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .div-account-sequence-two {
+
+    }
+</style>
+
+
+<title>Account</title>
+
+<div class="div-account-sequence">
+    {% for owner in user_id_html %}
+    <div class="div-account-sequence-two">
+        <div class="div-sequence">
+            <img class="img-sequence" style="" src="{{ owner.sequence.url }}">
+        </div>
+
+        <div class="div-account">
+            <div class="div-account-line-left" id="div-account-line-left"></div>
+            <div class="div-account-line-right" id="div-account-line-right"></div>
+
+            <div class="div-icon">
+                <div class="div-icon-customer">
+                    <img style="text-align: center;" class="img-icon" id="img-icon" src="{{ owner.icon.url }}">
+                </div>
+            </div>
+
+
+            <div style="margin-left: 370px; margin-top: -150px; margin-bottom: 300px;">
+                <h1 class="h1-text-account">{{ user.get_username }}</h1>
+                <p style="color: #FFD700; margin-left: 150px; margin-top: -40px;">{{ owner.virtual_money }}</p>
+                <input type="hidden" id="input-account-erma" name="input-erma" value="{{ owner.virtual_money }}">
+                <label for="input-account-erma"></label>
+                <div class="div-account-line" id="div-account-line"></div>
+                <div class="div-account-change-icon-and-sequence">
+                    <div class="div-account-two-change-icon">
+                        <div class="div-account-three-change-icon">
+                            <a class="a-account-change-icon" id="a-account-change-icon" href="{% url 'change_icon' %}">Change
+                                icon</a>
+                        </div>
+                    </div>
+                    <div class="div-account-two-change-sequence">
+                        <div class="div-account-three-change-sequence">
+                            <a class="a-account-change-sequence" id="a-account-change-sequence"
+                               href="{% url 'change_sequence' %}">Change sequence</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="div-account-change-color">
+                    <button type="submit" class="button-account-change-color-yellow"
+                            id="button-account-change-color-yellow" name="change_color_yellow" value="yellow"></button>
+                    <button type="submit" id="button-account-change-color-red"
+                            class="button-account-change-color-red" name="change_color_red" value="red"></button>
+                </div>
+            </div>
+            <h3 class="h3-account-customer-information" id="h3-account-customer-information">CUSTOMER INFORMATION:</h3>
+            <div class="div-account-information">
+                <div class="div-account-two-information">
+                    <div class="div-account-three-information">
+                        <p class="p-account-information-text" id="p-account-information-name-text">First and last
+                            name:</p>
+                        <p class="span-account-information-text" id="span-account-information-name-text">{{ user.first_name }}
+                            {{ user.last_name }}</p>
+
+                        <p class="p-account-information-text" id="p-account-information-surename-text">Email address:</p>
+                        <p class="span-account-information-text" id="span-account-information-surename-text">{{ user.email }}</p>
+
+                        <p class="p-account-information-text" id="p-account-information-phone-text">Phone number:</p>
+                        <p class="span-account-information-text" id="span-account-information-phone-text">{{ owner.phone }}</p>
+
+                        <p class="p-account-information-text" id="p-account-information-address-text">Address:</p>
+                        <p class="span-account-information-text" id="span-account-information-address-text">{{ owner.address }}</p>
+                        <div class="div-account-change-information">
+                            <div class="div-account-two-change-information">
+                                <a class="a-account-change-information" id="a-account-change-information"
+                                   href="{% url 'change_information' %}">Change information</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="div-account-menu-customer">
+                <div>
+                    <a class="a-account-menu-random" href="{% url 'random_product' %}">Random product</a>
+                </div>
+                <div>
+                    <a class="a-account-menu-random-for-erma" href="{% url 'random_product_erma' %}">By product for
+                        ERma</a>
+                </div>
+            </div>
+            <div class="div-account-information-cart-order">
+            </div>
+
+            {% endfor %}
+        </div>
+    </div>
+</div>
+<script>
+    if (localStorage.getItem('change_color_background') !== null) {
+        const color_background = localStorage.getItem('change_color_background');
+        document.getElementById('div-account-line-left').style.background = color_background;
+        document.getElementById('div-account-line-right').style.background = color_background;
+        document.getElementById('div-account-line').style.background = color_background;
+    }
+
+    if (localStorage.getItem('change_color_box_shadow') !== null) {
+        const color_box_shadow = localStorage.getItem('change_color_box_shadow');
+        document.getElementById('div-account-line-left').style.boxShadow = color_box_shadow;
+        document.getElementById('div-account-line-right').style.boxShadow = color_box_shadow;
+        document.getElementById('div-account-line').style.boxShadow = color_box_shadow;
+
+    }
+
+    if (localStorage.getItem('change_color_text_inf_icon_sequence') !== null) {
+        const color_text_inf_icon_sequence = localStorage.getItem('change_color_text_inf_icon_sequence');
+        document.getElementById('a-account-change-icon').style.color = color_text_inf_icon_sequence;
+        document.getElementById('a-account-change-sequence').style.color = color_text_inf_icon_sequence;
+        document.getElementById('a-account-change-information').style.color = color_text_inf_icon_sequence;
+    }
+
+    if (localStorage.getItem('change_color_icon_box_shadow') !== null) {
+        const color_icon_box_shadow = localStorage.getItem('change_color_icon_box_shadow');
+        document.getElementById('img-icon').style.filter = color_icon_box_shadow;
+
+    }
+
+    if (localStorage.getItem('change_color_customer_information_color') !== null) {
+        const color_customer_information_color = localStorage.getItem('change_color_customer_information_color');
+        document.getElementById('h3-account-customer-information').style.color = color_customer_information_color;
+
+    }
+
+    if (localStorage.getItem('change_color_customer_information_text_shadow') !== null) {
+        const color_customer_information_text_shadow = localStorage.getItem('change_color_customer_information_text_shadow');
+        document.getElementById('h3-account-customer-information').style.textShadow = color_customer_information_text_shadow;
+
+    }
+
+    if (localStorage.getItem('change_color_information_title_color') !== null) {
+        const color_information_title_color = localStorage.getItem('change_color_information_title_color');
+        document.getElementById('p-account-information-name-text').style.color = color_information_title_color;
+        document.getElementById('p-account-information-surename-text').style.color = color_information_title_color;
+        document.getElementById('p-account-information-phone-text').style.color = color_information_title_color;
+        document.getElementById('p-account-information-address-text').style.color = color_information_title_color;
+    }
+
+    if (localStorage.getItem('change_color_information_title_text_shadow') !== null) {
+        const color_information_title_text_shadow = localStorage.getItem('change_color_information_title_text_shadow');
+        document.getElementById('p-account-information-name-text').style.textShadow = color_information_title_text_shadow;
+        document.getElementById('p-account-information-surename-text').style.textShadow = color_information_title_text_shadow;
+        document.getElementById('p-account-information-phone-text').style.textShadow = color_information_title_text_shadow;
+        document.getElementById('p-account-information-address-text').style.textShadow = color_information_title_text_shadow;
+
+    }
+
+    if (localStorage.getItem('change_color_information_value_color') !== null) {
+        const color_information_value_color = localStorage.getItem('change_color_information_value_color');
+        document.getElementById('span-account-information-name-text').style.color = color_information_value_color;
+        document.getElementById('span-account-information-surename-text').style.color = color_information_value_color;
+        document.getElementById('span-account-information-phone-text').style.color = color_information_value_color;
+        document.getElementById('span-account-information-address-text').style.color = color_information_value_color;
+    }
+
+    const button_yellow = document.body.querySelector('.button-account-change-color-yellow');
+    button_yellow.addEventListener('click', function () {
+        document.getElementById("div-account-line-left").style.background = "#ff0";
+        document.getElementById('div-account-line-left').style.boxShadow = '0 0 5px #ff0';
+
+        document.getElementById("div-account-line-right").style.background = "#ff0";
+        document.getElementById('div-account-line-right').style.boxShadow = '0 0 5px #ff0';
+
+        document.getElementById("div-account-line").style.background = "#ff0";
+        document.getElementById('div-account-line').style.boxShadow = '0 0 5px #ff0';
+
+        document.getElementById('a-account-change-icon').style.color = '#FFD700';
+        document.getElementById('a-account-change-sequence').style.color = '#FFD700';
+        document.getElementById('a-account-change-information').style.color = '#FFD700';
+
+        document.getElementById('img-icon').style.filter = 'drop-shadow(0 0 10px #cccc00)';
+
+        document.getElementById('h3-account-customer-information').style.color = '#ff0';
+        document.getElementById('h3-account-customer-information').style.textShadow = '0 0 4px #ff0';
+
+        document.getElementById('p-account-information-name-text').style.color = '#FFD700';
+        document.getElementById('p-account-information-name-text').style.textShadow = '0 0 4px #ff0';
+
+        document.getElementById('p-account-information-surename-text').style.color = '#FFD700';
+        document.getElementById('p-account-information-surename-text').style.textShadow = '0 0 4px #ff0';
+
+        document.getElementById('p-account-information-phone-text').style.color = '#FFD700';
+        document.getElementById('p-account-information-phone-text').style.textShadow = '0 0 4px #ff0';
+
+        document.getElementById('p-account-information-address-text').style.color = '#FFD700';
+        document.getElementById('p-account-information-address-text').style.textShadow = '0 0 4px #ff0';
+
+        document.getElementById('span-account-information-name-text').style.color = '#cccc00';
+        document.getElementById('span-account-information-surename-text').style.color = '#cccc00';
+        document.getElementById('span-account-information-phone-text').style.color = '#cccc00';
+        document.getElementById('span-account-information-address-text').style.color = '#cccc00';
+
+
+        localStorage.setItem('change_color_information_value_color', '#cccc00');
+        localStorage.setItem('change_color_information_title_text_shadow', '0 0 4px #ff0');
+        localStorage.setItem('change_color_information_title_color', '#FFD700');
+        localStorage.setItem('change_color_customer_information_text_shadow', '0 0 4px #ff0');
+        localStorage.setItem('change_color_customer_information_color', '#ff0');
+        localStorage.setItem('change_color_icon_box_shadow', 'drop-shadow(0 0 10px #cccc00)');
+        localStorage.setItem('change_color_text_inf_icon_sequence', '#FFD700');
+        localStorage.setItem('change_color_background', '#ff0');
+        localStorage.setItem('change_color_box_shadow', '0 0 5px #ff0');
+    });
+
+    const button_red = document.querySelector('.button-account-change-color-red');
+    button_red.addEventListener('click', function () {
+        document.getElementById("div-account-line-left").style.background = "#f00";
+        document.getElementById('div-account-line-left').style.boxShadow = '0 0 5px #f00';
+
+        document.getElementById("div-account-line-right").style.background = "#f00";
+        document.getElementById('div-account-line-right').style.boxShadow = '0 0 5px #f00';
+
+        document.getElementById("div-account-line").style.background = "#f00";
+        document.getElementById('div-account-line').style.boxShadow = '0 0 5px #f00';
+
+        document.getElementById('a-account-change-icon').style.color = '#D10000';
+        document.getElementById('a-account-change-sequence').style.color = '#D10000';
+        document.getElementById('a-account-change-information').style.color = '#D10000';
+
+        document.getElementById('img-icon').style.filter = 'drop-shadow(0 0 10px #FF2E2E)';
+
+        document.getElementById('h3-account-customer-information').style.color = '#f00';
+        document.getElementById('h3-account-customer-information').style.textShadow = '0 0 4px #f00';
+
+        document.getElementById('p-account-information-name-text').style.color = '#FF2E2E';
+        document.getElementById('p-account-information-name-text').style.textShadow = '0 0 4px #f00';
+
+        document.getElementById('p-account-information-surename-text').style.color = '#FF2E2E';
+        document.getElementById('p-account-information-surename-text').style.textShadow = '0 0 4px #f00';
+
+        document.getElementById('p-account-information-phone-text').style.color = '#FF2E2E';
+        document.getElementById('p-account-information-phone-text').style.textShadow = '0 0 4px #f00';
+
+        document.getElementById('p-account-information-address-text').style.color = '#FF2E2E';
+        document.getElementById('p-account-information-address-text').style.textShadow = '0 0 4px #f00';
+
+        document.getElementById('span-account-information-name-text').style.color = '#BA0F30';
+        document.getElementById('span-account-information-surename-text').style.color = '#BA0F30';
+        document.getElementById('span-account-information-phone-text').style.color = '#BA0F30';
+        document.getElementById('span-account-information-address-text').style.color = '#BA0F30';
+
+
+        localStorage.setItem('change_color_information_value_color', '#BA0F30');
+        localStorage.setItem('change_color_information_title_text_shadow', '0 0 4px #f00');
+        localStorage.setItem('change_color_information_title_color', '#FF2E2E');
+        localStorage.setItem('change_color_customer_information_text_shadow', '0 0 4px #f00');
+        localStorage.setItem('change_color_customer_information_color', '#f00');
+        localStorage.setItem('change_color_icon_box_shadow', 'drop-shadow(0 0 10px #FF2E2E)');
+        localStorage.setItem('change_color_text_inf_icon_sequence', '#D10000');
+        localStorage.setItem('change_color_background', '#f00');
+        localStorage.setItem('change_color_box_shadow', '0 0 5px #f00');
+    });
+</script>
+
+{% endif %}
+
+{% endblock %}
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,152 @@
+.div-leave-comment {
+    height: 600px;
+    width: 1200px;
+    margin-top: 30px;
+    background: #222;
+    box-shadow: inset 0 0 10px #000;
+}
+
+.div-leave-comment-two {
+    position: relative;
+    top: 75px;
+    margin-right: auto;
+    margin-left: auto;
+    height: 450px;
+    width: 540px;
+    box-shadow:  0 0 5px #000;
+}
+
+.div-login-two-form {
+    position: relative;
+    top: 35px;
+    margin-right: auto;
+    margin-left: auto;
+    height: 380px;
+    width: 450px;
+    font-family: 'Sprite Graffiti', serif;
+
+
+
+}
+.div-leave-comment-form {
+    position: relative;
+    top: 35px;
+    margin-right: auto;
+    margin-left: auto;
+    height: 380px;
+    width: 450px;
+    font-family: 'Sprite Graffiti', serif;
+}
+.form-leave-send-comment {
+    height: 380px;
+    width: 450px;
+
+
+}
+
+.input-leave-form-text {
+    height: 100px;
+    width: 450px;
+    background: #222;
+    border-color: #000;
+    box-shadow: inset 0 0 5px #000;
+    color: #cccc00;
+    margin-top: 50px;
+    padding-bottom: 55px;
+    padding-left: 10px;
+
+
+
+}
+.input-leave-form-text::-webkit-input-placeholder {
+
+}
+
+.input-leave-form-text:focus {
+    box-shadow: 0 0 10px rgba(255, 255, 0, 0.2), inset 0 0 20px rgba(255, 255, 0, 0.1), 0 2px 0 #000;
+    outline: none!important;
+    border: solid 1px #ff0!important;
+    background: linear-gradient(#393939, #292929);
+
+}
+
+.input-leave-form-submit {
+    font-size: 100%;
+    font-family: 'Sprite Graffiti', serif;
+    background: #222;
+    border: solid 1px #ffff00;
+    box-shadow: 0 0 5px #ffff00;
+    position: relative;
+    height: 35px;
+    top: 20px;
+    left: 10px;
+    color: #ff0;
+    text-shadow: 0 0 5px #000;
+    border-radius: 5px;
+}
+
+.input-leave-form-submit:hover {
+  background: #333;
+}
+
+.rating {
+    overflow: hidden;
+    vertical-align: bottom;
+    display: inline-block;
+    width: 155px;
+    height: 30px;
+    margin-top: 50px;
+
+}
+
+.rating > input {
+  opacity: 0;
+  margin-right: -100%;
+}
+
+.rating > label {
+  position: relative;
+  display: block;
+  float: right;
+  background: url('../images/star_off.png');
+  background-size: 30px 30px;
+}
+
+.rating > label:before {
+  display: block;
+  opacity: 0;
+  content: '';
+  width: 30px;
+  height: 30px;
+  background: url('../images/star_on.png');
+  background-size: 30px 30px;
+  transition: opacity 0.2s linear;
+}
+
+.rating > label:hover:before,  .rating > label:hover ~ label:before,  .rating:not(:hover) > :checked ~ label:before { opacity: 1; }
+
+
+.rating-4 {
+  overflow: hidden;
+  vertical-align: bottom;
+  display: inline-block;
+  width: 155px;
+  height: 30px;
+}
+
+.rating-4 > input {
+  opacity: 0;
+  margin-right: -100%;
+}
+
+.rating-4 > label {
+  position: relative;
+  display: block;
+  float: right;
+  background: url('../images/star_on.png');
+  background-size: 30px 30px;
+}
+
+
+
+

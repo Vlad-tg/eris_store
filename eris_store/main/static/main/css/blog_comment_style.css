@@ -1,0 +1,179 @@
+.div-blog-comment {
+    position: relative;
+    width: 1300px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    box-shadow: 0 0 10px #000;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.div-blog-two-comment {
+    position: relative;
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+#button-blog-comment-leave-id {
+    border: solid 1px #ff0;
+    height: 40px;
+    box-shadow: 0 0 5px #ff0;
+    background: #222;
+    color: #ff0;
+    width: 200px;
+    font-family: 'Sprite Graffiti', serif;
+    border-radius: 5px;
+    font-size: 79%;
+}
+#button-blog-comment-leave-id:hover {
+    background: #333;
+}
+
+.div-blog-comment-whole-comment {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    width: 1100px;
+
+}
+.b-blog-comment-username {
+    color: #FFD700;
+    text-shadow: 0 0 10px #000;
+    font-family: 'Sprite Graffiti', serif;
+    font-size: 110%;
+
+
+}
+.span-blog-comment-timestamp {
+    font-family: 'Yu Mincho', serif;
+    font-size: 80%;
+    color: #fdf5e6;
+}
+
+.div-blog-comment-comment{
+    border: solid 1px #ff0;
+    height: 120px;
+    margin-top: 25px;
+    border-radius: 5px;
+    box-shadow: inset 0 0 20px #000;
+    text-shadow: 0 0 20px #000;
+    width: 1100px;
+    color: #cccc00;
+    padding: 15px 15px 15px 15px;
+    font-family: 'Sprite Graffiti', serif;
+    word-break: break-all;
+}
+
+.button-blog-comment-reply {
+    border: solid 1px #ff0;
+    height: 40px;
+    box-shadow: 0 0 5px #ff0;
+    background: #222;
+    color: #ff0;
+    margin-top: 10px;
+    margin-bottom: -15px;
+    width: 80px;
+    font-family: 'Sprite Graffiti', serif;
+    border-radius: 5px;
+    font-size: 79%;
+}
+
+.button-blog-comment-reply:hover {
+    background: #333;
+}
+.button-blog-comment-reply:focus {
+    border-color: #ff0!important;
+    outline: solid 1px #FFD700;
+}
+.div-blog-comment-whole-reply-comment {
+    margin-left: 130px;
+    margin-top: 30px;
+    margin-bottom: -20px;
+    width: 1000px;
+}
+
+.b-blog-comment-reply-username {
+    color: #FFD700;
+    text-shadow: 0 0 10px #000;
+    font-family: 'Sprite Graffiti', serif;
+    font-size: 110%;
+}
+
+.span-blog-comment-reply-timestamp {
+    font-family: 'Yu Mincho', serif;
+    font-size: 80%;
+    color: #fdf5e6;
+}
+
+.div-blog-comment-reply-comment {
+    border: solid 1px #ff0;
+    height: 120px;
+    margin-top: 25px;
+    box-shadow: inset 0 0 20px #000;
+    text-shadow: 0 0 20px #000;
+    border-radius: 5px;
+    width: 1000px;
+    color: #cccc00;
+    padding: 15px 15px 15px 15px;
+    font-family: 'Sprite Graffiti', serif;
+    word-break: break-all;
+}
+.div-blog-comment-reply {
+    margin-top: 10px;
+}
+
+#comment {
+
+    margin-top: 30px;
+    margin-left: 130px;
+    margin-bottom: 40px;
+
+}
+
+
+.div-blog-comment-reply-comment-text {
+    height: 100px;
+    width: 1000px;
+    background: #222;
+    border-color: #000;
+    box-shadow: inset 0 0 5px #000;
+    color: #cccc00;
+    margin-top: 50px;
+    padding-bottom: 55px;
+    padding-left: 10px;
+    border-radius: 5px;
+}
+.div-blog-comment-reply-comment-text:focus {
+    box-shadow: 0 0 10px rgba(255, 255, 0, 0.2), inset 0 0 20px rgba(255, 255, 0, 0.1), 0 2px 0 #000;
+    outline: none!important;
+    border: solid 1px #ff0!important;
+    background: linear-gradient(#393939, #292929);
+}
+
+.button-blog-comment-reply-comment {
+    font-size: 100%;
+    font-family: 'Sprite Graffiti', serif;
+    background: #222;
+    border: solid 1px #ffff00;
+    box-shadow: 0 0 5px #ffff00;
+
+    height: 35px;
+    margin-left: 140px;
+    margin-top: -20px;
+    color: #ff0;
+    text-shadow: 0 0 5px #000;
+    border-radius: 5px;
+}
+
+.button-blog-comment-reply-comment:hover {
+    background: #333;
+}
+
+.div-blog-comment-login-to-post {
+
+}
+
+
+

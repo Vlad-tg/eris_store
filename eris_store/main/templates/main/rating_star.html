@@ -1,0 +1,107 @@
+{% load static %}
+{% load crispy_forms_tags %}
+
+<link rel="stylesheet" href="{% static '/main/css/rating_star_style.css' %}" type="text/css">
+
+
+<div class="div-rating-star">
+    <p class="p-rating-star-rating-title" >RATING:
+        <span>{{ rating_html.total }}</span></p>
+
+    {% if rating_html.total > 4.5 %}
+    <span class="rating">
+        <input id="rating5" type="radio" name="star" value="5" checked="checked">
+        <label>5</label>
+
+        <input id="rating4" type="radio" name="star" value="4">
+        <label>4</label>
+
+        <input id="rating3" type="radio" name="star" value="3">
+        <label>3</label>
+
+        <input id="rating2" type="radio" name="star" value="2">
+        <label>2</label>
+
+        <input id="rating1" type="radio" name="star" value="1">
+        <label>1</label>
+    </span>
+    {% endif %}
+
+    {% if rating_html.total > 3.5 and rating_html.total <= 4.5 %}
+    <span class="rating">
+        <input id="rating5-4" type="radio" name="star" value="5">
+        <label>5</label>
+
+        <input id="rating4-4" type="radio" name="star" value="4" checked="checked">
+        <label>4</label>
+
+
+        <input id="rating3-4" type="radio" name="star" value="3">
+        <label>3</label>
+
+        <input id="rating2-4" type="radio" name="star" value="2">
+        <label>2</label>
+
+        <input id="rating1-4" type="radio" name="star" value="1">
+        <label>1</label>
+    </span>
+    {% endif %}
+    {% if rating_html.total > 2.5 and rating_html.total <= 3.5 %}
+    <span class="rating">
+        <input id="rating5-3" type="radio" name="star" value="5">
+        <label>5</label>
+
+        <input id="rating4-3" type="radio" name="star" value="4">
+        <label>4</label>
+
+        <input id="rating3-3" type="radio" name="star" value="3" checked="checked">
+        <label>3</label>
+
+        <input id="rating2-3" type="radio" name="star" value="2">
+        <label>2</label>
+
+        <input id="rating1-3" type="radio" name="star" value="1">
+        <label>1</label>
+    </span>
+    {% endif %}
+    {% if rating_html.total > 1.5 and rating_html.total <= 2.5 %}
+    <span class="rating">
+        <input id="rating5-2" type="radio" name="star" value="5" >
+        <label>5</label>
+
+        <input id="rating4-2" type="radio" name="star" value="4">
+        <label>4</label>
+
+        <input id="rating3-2" type="radio" name="star" value="3">
+        <label>3</label>
+
+        <input id="rating2-2" type="radio" name="star" value="2" checked="checked">
+        <label>2</label>
+
+        <input id="rating1-2" type="radio" name="star" value="1">
+        <label>1</label>
+    </span>
+    {% endif %}
+
+    {% if rating_html.total > 0 and rating_html.total <= 1.5 %}
+    <span class="rating">
+        <input id="rating5-1" type="radio" name="star" value="5" >
+        <label>5</label>
+
+        <input id="rating4-1" type="radio" name="star" value="4">
+        <label>4</label>
+
+        <input id="rating3-1" type="radio" name="star" value="3">
+        <label>3</label>
+
+        <input id="rating2-1" type="radio" name="star" value="2">
+        <label>2</label>
+
+        <input id="rating1-1" type="radio" name="star" value="1" checked="checked">
+        <label>1</label>
+    </span>
+    {% endif %}
+    <p class="p-rating-star-rating-count">{{ rating_count_html.total }}</p>
+</div>
+
+

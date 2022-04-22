@@ -1,0 +1,29 @@
+{% extends 'main/all.html' %}
+{% load crispy_forms_tags %}
+{% load static %}
+
+{% block content %}
+
+{% if request.user.is_authenticated %}
+<link rel="stylesheet" href="{% static '/main/css/edit_style.css' %}" type="text/css"/>
+<div style="display: flex; justify-content: center; align-items: center;">
+    <div class="div-edit">
+        <div class="div-edit-form">
+            <form method="post" enctype="multipart/form-data">
+
+                <div class="div-edit-two-form">
+                    {% csrf_token %}
+                    {{ form_information_html|crispy }}
+                    {{ form_sequence_html|crispy }}
+                    {{ form_icon_html|crispy }}
+
+                    <button class="button-edit-form" type="submit">Save change</button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endif %}
+{% endblock %}

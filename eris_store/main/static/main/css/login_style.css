@@ -1,0 +1,161 @@
+.div-login {
+    height: 600px;
+    width: 1200px;
+    margin-top: 30px;
+    background: #222;
+    box-shadow: inset 0 0 10px #000;
+}
+
+.div-login-form {
+    position: relative;
+    top: 75px;
+    margin-right: auto;
+    margin-left: auto;
+    height: 450px;
+    width: 540px;
+    box-shadow:  0 0 5px #000;
+
+
+}
+
+.div-login-two-form {
+    position: relative;
+    top: 35px;
+    margin-right: auto;
+    margin-left: auto;
+    height: 380px;
+    width: 450px;
+    font-family: 'Sprite Graffiti', serif;
+}
+
+.div-login-three-form {
+
+    margin-top: 40px;
+
+}
+
+.button-login-form {
+
+    font-size: 100%;
+    font-family: 'Sprite Graffiti', serif;
+    background: #222;
+    border: solid 1px #ffff00;
+    box-shadow: 0 0 5px #ffff00;
+    position: relative;
+    height: 35px;
+    top: 27px;
+    left: 10px;
+    color: #ff0;
+    text-shadow: 0 0 5px #000;
+    border-radius: 5px;
+}
+
+.button-login-form:hover {
+  background: #333;
+}
+
+.form-group {
+    margin-top: 25px;
+
+}
+
+.div-login-create-account {
+    margin-left: 180px;
+    top: -10px;
+    position: relative;
+    height: 25px;
+    width: 120px;
+    border: solid 1px #000;
+    box-shadow: inset 0 0 5px #000;
+    background: #222;
+}
+
+.div-login-two-create-account {
+    height: 20px;
+    width: 86px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.a-login-create-account {
+    color: #FFD700;
+    text-decoration: none;
+    text-shadow: 0 0 5px #000;
+    font-size: 90%;
+
+}
+.a-login-create-account:hover {
+    color: #FFD700;
+    text-shadow: 0 0 2px #000;
+    text-decoration: underline;
+}
+
+.div-login-forgot-password {
+    margin-left: 320px;
+    top: -35px;
+    position: relative;
+    height: 25px;
+    width: 130px;
+    border: solid 1px #000;
+    box-shadow: inset 0 0 5px #000;
+    background: #222;
+}
+
+.div-login-two-forgot-password {
+    height: 20px;
+    width: 103px;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.a-login-forgot-password {
+    color: #FFD700;
+    text-decoration: none;
+    text-shadow: 0 0 5px #000;
+    font-size: 90%;
+
+}
+.a-login-forgot-password:hover {
+    color: #FFD700;
+    text-shadow: 0 0 2px #000;
+    text-decoration: underline;
+}
+
+.text-muted {
+    color: #FFD700!important;
+    text-shadow: 0 0 5px #000;
+    top: 5px!important;
+    position: relative;
+    left: 10px;
+}
+.textinput {
+    background: #222!important;
+    border-color: #000!important;
+    box-shadow: inset 0 0 5px #000!important;
+    color: #cccc00!important;
+
+
+
+}
+.textinput:-webkit-autofill {
+    border: solid 2px #000!important;
+}
+
+.textinput:focus {
+    box-shadow: 0 0 5px rgba(255, 255, 0, 0.2), inset 0 0 20px rgba(255, 255, 0, 0.1)!important;
+    border-color: #FFFF00!important;
+    background: #222!important;
+    /*animation: flashing_create_account 800ms ease-out infinite alternate!important;*/
+}
+
+/*@keyframes flashing_create_account  {*/
+/*    0% {*/
+/*        border-color: #fcfc00;*/
+/*        box-shadow: 0 0 5px rgba(255, 255, 0, .2), inset 0 0 5px rgba(255, 255, 0, .1);*/
+/*    }*/
+/*    100% {*/
+/*        border-color: #feff47;*/
+/*        box-shadow: 0 0 20px rgba(255, 255, 0, .6), inset 0 0 10px rgba(255, 255, 0, .4);*/
+/*    }*/
+/*}*/

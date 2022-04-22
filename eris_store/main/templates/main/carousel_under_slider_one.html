@@ -1,0 +1,222 @@
+{% load static %}
+
+<link rel="stylesheet" href="{% static '/main/css/icon_product.css' %}" type="text/css">
+<link rel="stylesheet" href="{% static '/main/css/carousel_under_slider_one_style.css' %}" type="text/css">
+
+<section class="section-carousel-under-slider-one">
+
+    <div class="div-all-carousel-under-slider-one">
+        <div class="div-carousel-under-slider-one active">
+                {% for product_laptops in products_laptop %}
+                {% if product_laptops.pk == 1 %}
+                <div class="product-content">
+                    <a style="text-decoration: none;" href="{{ product_laptops.get_absolute_url }}">
+                        <div class="div-product-picture">
+                            <img class="img-product-picture" src="{{ product_laptops.image.url }}">
+                        </div>
+                        <div class="div-product-title">
+                            <p class="p-product-title">{{ product_laptops.title }}</p>
+
+                        </div>
+                    </a>
+                    <div class="div-product-price-and-cart">
+                        <div class="div-product-price">
+                            <p class="p-product-price">${{ product_laptops.price }}</p>
+                        </div>
+                        <div class="div-product-cart">
+                            <a href="{% url 'add_to_cart'  slug=product_laptops.slug %}">
+                                <button class="button-product-cart"><i class="fas fa-shopping-cart"></i></button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            {% endif %}
+            {% if product_laptops.pk == 2 %}
+            <div class="product-content">
+                <a style="text-decoration: none;" href="{{ product_laptops.get_absolute_url }}">
+                    <div class="div-product-picture">
+                        <img class="img-product-picture" src="{{ product_laptops.image.url }}">
+                    </div>
+                    <div class="div-product-title">
+                        <p class="p-product-title">{{ product_laptops.title }}</p>
+
+                    </div>
+                </a>
+                <div class="div-product-price-and-cart">
+                    <div class="div-product-price">
+                        <p class="p-product-price">${{ product_laptops.price }}</p>
+                    </div>
+                    <div class="div-product-cart">
+                        <a href="{% url 'add_to_cart' slug=product_laptops.slug %}">
+                            <button class="button-product-cart"><i class="fas fa-shopping-cart"></i></button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            {% endif %}
+            {% if product_laptops.pk == 3 %}
+            <div class="product-content">
+                <a style="text-decoration: none;" href="{{ product_laptops.get_absolute_url }}">
+                    <div class="div-product-picture">
+                        <img class="img-product-picture" src="{{ product_laptops.image.url }}">
+                    </div>
+                    <div class="div-product-title">
+                        <p class="p-product-title">{{ product_laptops.title }}</p>
+
+                    </div>
+                </a>
+                <div class="div-product-price-and-cart">
+                    <div class="div-product-price">
+                        <p class="p-product-price">${{ product_laptops.price }}</p>
+                    </div>
+                    <div class="div-product-cart">
+                        <a href="{% url 'add_to_cart' slug=product_laptops.slug %}">
+                            <button class="button-product-cart"><i class="fas fa-shopping-cart"></i></button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            {% endif %}
+            {% if product_laptops.pk == 4 %}
+            <div class="product-content">
+                <a style="text-decoration: none;" href="{{ product_laptops.get_absolute_url }}">
+                    <div class="div-product-picture">
+                        <img class="img-product-picture" src="{{ product_laptops.image.url }}">
+                    </div>
+                    <div class="div-product-title">
+                        <p class="p-product-title">{{ product_laptops.title }}</p>
+
+                    </div>
+                </a>
+                <div class="div-product-price-and-cart">
+                    <div class="div-product-price">
+                        <p class="p-product-price">${{ product_laptops.price }}</p>
+                    </div>
+                    <div class="div-product-cart">
+                        <a href="{% url 'add_to_cart' slug=product_laptops.slug %}">
+                            <button class="button-product-cart"><i class="fas fa-shopping-cart"></i></button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            {% endif %}
+
+            {% endfor %}
+
+            </div>
+
+
+        <div class="div-carousel-under-slider-one">
+
+                {% for product_laptops in products_laptop %}
+                {% if product_laptops.pk == 5 %}
+                <div class="product-content">
+                    <a style="text-decoration: none;" href="{{ product_laptops.get_absolute_url }}">
+                        <div class="div-product-picture">
+                            <img class="img-product-picture" src="{{ product_laptops.image.url }}">
+                        </div>
+                        <div class="div-product-title">
+                            <p class="p-product-title">{{ product_laptops.title }}</p>
+
+                        </div>
+                    </a>
+                    <div class="div-product-price-and-cart">
+                        <div class="div-product-price">
+                            <p class="p-product-price">${{ product_laptops.price }}</p>
+                        </div>
+                        <div class="div-product-cart">
+                            <a href="{% url 'add_to_cart' slug=product_laptops.slug %}">
+                                <button class="button-product-cart"><i class="fas fa-shopping-cart"></i></button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            {% endif %}
+            {% if product_laptops.pk == 6 %}
+            <div class="product-content">
+                <a style="text-decoration: none;" href="{{ product_laptops.get_absolute_url }}">
+                    <div class="div-product-picture">
+                        <img class="img-product-picture" src="{{ product_laptops.image.url }}">
+                    </div>
+                    <div class="div-product-title">
+                        <p class="p-product-title">{{ product_laptops.title }}</p>
+
+                    </div>
+                </a>
+                <div class="div-product-price-and-cart">
+                    <div class="div-product-price">
+                        <p class="p-product-price">${{ product_laptops.price }}</p>
+                    </div>
+                    <div class="div-product-cart">
+                        <a href="{% url 'add_to_cart' slug=product_laptops.slug %}">
+                            <button class="button-product-cart"><i class="fas fa-shopping-cart"></i></button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            {% endif %}
+            {% if product_laptops.pk == 7 %}
+            <div class="product-content">
+                <a style="text-decoration: none;" href="{{ product_laptops.get_absolute_url }}">
+                    <div class="div-product-picture">
+                        <img class="img-product-picture" src="{{ product_laptops.image.url }}">
+                    </div>
+                    <div class="div-product-title">
+                        <p class="p-product-title">{{ product_laptops.title }}</p>
+
+                    </div>
+                </a>
+                <div class="div-product-price-and-cart">
+                    <div class="div-product-price">
+                        <p class="p-product-price">${{ product_laptops.price }}</p>
+                    </div>
+                    <div class="div-product-cart">
+                        <a href="{% url 'add_to_cart' slug=product_laptops.slug %}">
+                            <button class="button-product-cart"><i class="fas fa-shopping-cart"></i></button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            {% endif %}
+            {% if product_laptops.pk == 8 %}
+            <div class="product-content">
+                <a style="text-decoration: none;" href="{{ product_laptops.get_absolute_url }}">
+                    <div class="div-product-picture">
+                        <img class="img-product-picture" src="{{ product_laptops.image.url }}">
+                    </div>
+                    <div class="div-product-title">
+                        <p class="p-product-title">{{ product_laptops.title }}</p>
+
+                    </div>
+                </a>
+                <div class="div-product-price-and-cart">
+                    <div class="div-product-price">
+                        <p class="p-product-price">${{ product_laptops.price }}</p>
+                    </div>
+                    <div class="div-product-cart">
+                        <a href="{% url 'add_to_cart' slug=product_laptops.slug %}">
+                            <button class="button-product-cart"><i class="fas fa-shopping-cart"></i></button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+
+    <div class="controls-carousel-under-slider-one">
+        <div class="prev-carousel-under-slider-one"><</div>
+        <div class="next-carousel-under-slider-one">></div>
+    </div>
+</section>
+
+
+<script src="static/main/js/carousel_under_slider_one_script.js"></script>

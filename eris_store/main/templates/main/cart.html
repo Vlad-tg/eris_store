@@ -1,0 +1,102 @@
+{% extends 'main/all.html' %}
+{% load static %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static '/main/css/cart_style.css' %}" type="text/css">
+<div style="display: flex; justify-content: center; align-items: center;">
+  <!--<div class="col-lg-9">-->
+  <!--    {% if messages %} {% for message in messages %}-->
+  <!--    <div class="alert alert-success alert-dismissible fade show" role="alert">-->
+  <!--        <strong>{{ message }}</strong>-->
+  <!--        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>-->
+  <!--    </div>-->
+  <!--</div>-->
+
+  <!--{% endfor %} {% endif %}-->
+
+  {% if not cart.products.count %}
+  <div class="div-cart-empty">
+    <div class="div-cart-content-empty">
+      <div class="div-cart-two-content-empty">
+        <h3 class="h3-cart-empty">Your cart Empty</h3>
+      </div>
+    </div>
+  </div>
+  {% endif %}
+
+  <!--{% if messages %}-->
+  <!--{% for message in messages %}-->
+  <!--<div class="alert alert-success alert-dismissible fade show" role="alert">-->
+  <!--  <strong>{{ message }}</strong>-->
+  <!--  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>-->
+  <!--</div>-->
+  <!--{% endfor %}-->
+  <!--{% endif %}-->
+  {% if cart.products.count %}
+  <div class="div-cart-product">
+    <div class="div-cart-product-nav">
+      <p id="p-cart-col-name" class="p-cart-product-nav">NAME(PRICE)</p>
+      <p id="p-cart-col-picture" class="p-cart-product-nav">PICTURE</p>
+      <p id="p-cart-col-total-price" class="p-cart-product-nav">TOTAL PRICE</p>
+      <p id="p-cart-col-action" class="p-cart-product-nav">ACTION</p>
+    </div>
+    <table class="table-cart-product">
+      <tbody class="tbody-cart-product">
+
+      {% for item in cart.products.all %}
+
+
+      <tr class="tr-cart-product">
+
+        <th class="th-cart-product-title" scope="row">{{ item.product.title }}
+          <p class="p-cart-product-price">{{ item.product.price }}$</p></th>
+
+        <td class="td-cart-product-image"><img src="{{ item.product.image.url }}" class="img-cart-product">
+        </td>
+
+
+        <td class="td-cart-product-qty">
+          <form action="{% url 'change_gty_cart' slug=item.product.slug %}"
+                method="POST">
+            {% csrf_token %}
+            <input type="number" class="input-cart-product-qty" name="qty" min="1" value="{{ item.qty }}">
+            <br>
+            <input type="submit" class="input-cart-product-qty-submit" value="CHANGE QUANTITY">
+          </form>
+        </td>
+        <td class="td-cart-product-total-price"><p class="p-cart-product-total-price">{{ item.total_price }}$</p></td>
+
+        <td class="td-cart-product-delete-from-cart">
+
+          <a href="{% url 'delete_from_cart' slug=item.product.slug %}">
+            <button class="button-cart-product-delete-from-cart">DELETE FROM CART</button>
+          </a>
+        </td>
+      </tr>
+
+      {% endfor %}
+
+
+      <tr>
+        <td colspan="2"></td>
+        <td class="td-cart-total">Total:</td>
+        <td class="td-cart-total-products">{{ cart.total_products }}</td>
+        <td class="td-cart-total-price">{{ cart.total_price }} $</td>
+        <td><a href="{% url 'checkout' %}">
+          <button class="button-cart-checkout">CHECKOUT</button>
+        </a></td>
+      </tr>
+      </tbody>
+    </table>
+    <!--  <form action="{% url 'promo_code' %}" method="get">-->
+    <!--      <input type="text" name="promo_codes" placeholder="Please enter the code">-->
+    <!--      <input type="submit" value="Apple">-->
+    <!--    </form>-->
+    <!--    <p>{{ codes.code }}</p>-->
+  </div>
+  {% endif %}
+</div>
+
+
+
+{% endblock %}

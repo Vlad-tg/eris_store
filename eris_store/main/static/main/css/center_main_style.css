@@ -1,0 +1,212 @@
+.nav-all-line-center {
+    position: relative;
+    display: block;
+    height: 110px;
+    width: 100%;
+    background-color: #333;
+}
+
+.div-all-line-center-one {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.div-all-line-center-two {
+    width: 1420px;
+}
+
+.div-main-center-media-views {
+    margin-left: 50px;
+    padding-top: 35px;
+
+}
+
+.a-neon-text-main-view {
+    text-decoration: none;
+    color: #fff;
+}
+
+.a-neon-text-main-view:hover {
+    text-decoration: none;
+    color: #fff;
+}
+
+.text-h2-main {
+    color: #fff;
+    font-family: 'Georgia', serif;
+    font-size: 30px;
+    text-shadow: 0 0 7px #ffff00,
+    0 0 10px #ffff00,
+    0 0 16px #ffff00,
+    0 0 37px #ffff00,
+    0 0 77px #ffff00,
+    0 0 87px #ffff00;
+    animation: flicker 1.5s infinite alternate;
+}
+
+.test-span-h2 {
+    font-size: 40px;
+}
+
+@keyframes flicker {
+
+    0%, 18%, 22%, 25%, 53%, 57%, 100% {
+
+        text-shadow: 0 0 4px #ffff00,
+        0 0 11px #ffff00,
+        0 0 19px #ffff00,
+        0 0 40px #ffff00,
+        0 0 80px #ffff00,
+        0 0 90px #ffff00;
+    }
+
+    20%, 24%, 55% {
+        text-shadow: none;
+    }
+}
+
+.search-form-center-views {
+    margin-left: 100px;
+    margin-top: -56px;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+
+.search-input-center-views {
+    background: linear-gradient(#333, #222);
+    width: 400px;
+    height: 44px;
+    padding-left: 15px;
+    outline: none;
+    border-radius: 5px;
+    color: #ff0!important;
+    border: 1px solid #FFFF00;
+    box-shadow: 0 0 10px rgba(255, 255, 0, 0.2), 0 0 5px rgba(255, 255, 0, 0.4), inset 0 0 20px rgba(255, 255, 0, 0.1), 0 2px 0 #000;
+
+}
+
+.search-input-center-views:focus {
+    box-shadow: 0 0 10px rgba(255, 255, 0, 0.2), inset 0 0 20px rgba(255, 255, 0, 0.1), 0 2px 0 #000;
+    border-color: #FFFF00;
+    background: linear-gradient(#393939, #292929);
+    animation: glow 800ms ease-out infinite alternate;
+}
+
+@keyframes glow {
+    0% {
+        border-color: #fcfc00;
+        box-shadow: 0 0 5px rgba(255, 255, 0, .2), inset 0 0 5px rgba(255, 255, 0, .1), 0 2px 0 #000;
+    }
+    100% {
+        border-color: #feff47;
+        box-shadow: 0 0 20px rgba(255, 255, 0, .6), inset 0 0 10px rgba(255, 255, 0, .4), 0 2px 0 #000;
+    }
+}
+
+.search-input-center-views:focus::-webkit-input-placeholder {
+    color: #fefec9;
+}
+
+.div-search-center-views {
+    margin-top: -44px;
+    margin-left: 405px;
+}
+
+.search-input-center-views::-webkit-search-cancel-button,
+.search-button-center-views {
+    width: 50px;
+    height: 44px;
+    border: 1px solid #444;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    background: linear-gradient(#333, #222);
+}
+
+.search-button-center-views:hover {
+    background: linear-gradient(#393939, #292929);
+
+}
+
+.search-input-center-views::-ms-clear {
+    display: none;
+}
+
+input[type=text]::-ms-clear {
+    display: none;
+    width: 0;
+    height: 0;
+}
+
+input[type=text]::-ms-reveal {
+    display: none;
+    width: 0;
+    height: 0;
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+    display: none;
+}
+
+.search-media-views {
+    height: 50%;
+    width: 20px;
+    z-index: 5;
+    transition: all 1s ease;
+}
+
+.search-button-center-views:hover .search-media-views {
+    fill: #ffff00;
+    filter: drop-shadow(0 0 5px #ffff00);
+
+}
+
+.cart-on-nav-views {
+    margin-top: -61.5px;
+    margin-left: 1250px;
+}
+
+.media-img-carts-views {
+    transition: all 1s ease;
+    filter: drop-shadow(0 0 5px #ffff00);
+}
+
+.media-img-carts-views:hover {
+    fill: #ffff00;
+}
+
+.count-cart-views {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    color: #060606;
+    font-family: 'Arial', serif;
+    font-weight: 900;
+    top: 0.4px;
+    left: 7.5px;
+}
+
+.under-count-cart-views {
+    position: absolute;
+    height: 25px;
+    width: 25px;
+    background-color: #fbfbfb;
+    border-radius: 50%;
+    top: -4px;
+    left: 38px;
+    border: solid 1px #727272;
+
+
+}
+
+.main-center-media-views {
+    position: absolute;
+    left: 70px;
+    top: 13px;
+    height: 65px;
+    width: 250px;
+}

@@ -1,0 +1,40 @@
+{% extends 'main/all.html' %}
+{% load crispy_forms_tags %}
+{% load static %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static '/main/css/login_style.css' %}" type="text/css"/>
+<div style="display: flex; justify-content: center; align-items: center;">
+    <div class="div-login">
+        <div class="div-login-form">
+
+            <form style="" action="" method="post">
+                <div class="div-login-two-form">
+                    <h3 style="color: #ff0; text-shadow: 0 0 5px #ff0;" class="text-center">Authorization</h3>
+                    <hr style="color: #ff0; text-shadow: 0 0 5px #ff0;">
+                    <div class="div-login-three-form">
+                        {% csrf_token %}
+                        {{ form|crispy }}
+                        <input type="submit" class="button-login-form" value="Sign in">
+                        <div class="div-login-create-account">
+                            <div class="div-login-two-create-account">
+                                <a class="a-login-create-account" href="{% url 'create_account' %}">Create account</a>
+                            </div>
+                        </div>
+
+                        <div class="div-login-forgot-password">
+                            <div class="div-login-two-forgot-password">
+                                <a class="a-login-forgot-password" href="{% url 'password_reset' %}">Forgot
+                                    password?</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+
+
+        </div>
+    </div>
+</div>
+
+{% endblock %}

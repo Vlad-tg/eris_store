@@ -1,0 +1,70 @@
+{% extends 'main/all.html' %}
+{% load crispy_forms_tags %}
+{% load static %}
+{% block content %}
+<link rel="stylesheet" href="{% static '/main/css/checkout_style.css' %}" type="text/css">
+<div style="display: flex; justify-content: center; align-items: center;">
+  <div>
+    <div>
+      <h3 class="h3-checkout-text">ORDER GOODS</h3>
+    </div>
+    <div class="div-checkout-product">
+      <div class="div-checkout-product-nav">
+        <p id="p-checkout-col-name" class="p-checkout-product-nav">NAME(PRICE)</p>
+        <p id="p-checkout-col-picture" class="p-checkout-product-nav">PICTURE</p>
+        <p id="p-checkout-col-number" class="p-checkout-product-nav">NUMBER</p>
+        <p id="p-checkout-col-total-price" class="p-checkout-product-nav">TOTAL PRICE</p>
+      </div>
+      <table class="table-checkout-product">
+        <tbody>
+        {% for item in cart.products.all %}
+
+        <tr class="tr-checkout-product">
+
+          <th class="th-checkout-product-title" scope="row">{{ item.product.title }}
+            <p class="p-checkout-product-price">{{ item.product.price }}$</p></th>
+
+          <td class="td-checkout-product-image"><img src="{{ item.product.image.url }}" class="img-checkout-product">
+          </td>
+          <td class="td-checkout-qty">{{ item.qty }}</td>
+          <td class="td-checkout-product-total-price">
+            <p class="p-checkout-product-total-price">{{ item.total_price }}$</p>
+          </td>
+
+
+        </tr>
+
+
+        {% endfor %}
+
+        <tr>
+          <td colspan="2"></td>
+          <td class="td-checkout-total">Total:</td>
+          <td class="td-checkout-total-products">{{ cart.total_products }}</td>
+
+          <td class="td-checkout-total-price">{{ cart.total_price }} $</td>
+        </tr>
+
+        </tbody>
+      </table>
+    </div>
+
+    <hr>
+
+    <div class="div-checkout-order">
+      <div class="div-checkout-order-two">
+        <!--    <h3 class="text-canter mt-5 mb-5">Form order</h3>-->
+        <form action="{% url 'make_order' %}" method="POST">
+          <div class="div-checkout-order-form">
+            <div class="div-checkout-order-form-two">
+              {% csrf_token %}
+              {{ form|crispy }}
+              <input type="submit" class="input-checkout-form" value="Order goods">
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

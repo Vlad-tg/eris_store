@@ -1,0 +1,314 @@
+{% extends 'main/all.html' %}
+{% load static %}
+{% load specifications %}
+
+
+{% block content %}
+<link rel="stylesheet" href="{% static '/main/css/laptop_with_filter_main_style.css' %}" type="text/css">
+<div style="display: flex; justify-content: center; align-items: center;">
+    <div class="div-all-filter-and-product-laptop">
+        <form style="margin-left: -270px; top: 60px; width: 310px; height: 2250px; position: relative; z-index: 3;"
+              id="form-filter"
+              action="{% url 'filter_laptop' %}" method="get">
+            <div class="div-title-filter-laptop">
+                <button type="button" class="button-hide-filter-laptop" id="button-filter-laptop-video-id">
+                    <img class="img-hide-filter-laptop" src="/static/main/images/down-arrow-hide.svg">
+                </button>
+
+                <p class="p-title-filter-laptop">VIDEOS</p>
+            </div>
+            <div class="div-main-filter-laptop" id="filter-laptop-video-id">
+                <ul class="ul-checkbox-filter-laptop">
+                    {% for video in videos %}
+                    <li class="li-checkbox-filter-laptop">
+                        <div class="div-checkbox-filter-laptop">
+                            <input type="checkbox" class="input-checkbox-filter-laptop" id="video" name="video"
+                                   value="{{ video.id }}">
+                            <p class="label-name-filter-laptop">{{ video.name }}</p>
+                        </div>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div class="div-title-filter-laptop">
+                <button type="button" class="button-hide-filter-laptop" id="button-filter-laptop-processor-id">
+                    <img class="img-hide-filter-laptop" src="/static/main/images/down-arrow-hide.svg">
+                </button>
+                <p class="p-title-filter-laptop">PROCESSORS</p>
+            </div>
+            <div class="div-main-filter-laptop" id="filter-laptop-processor-id">
+
+                <ul class="ul-checkbox-filter-laptop">
+                    {% for processor in processors %}
+                    <li class="li-checkbox-filter-laptop">
+                        <div class="div-checkbox-filter-laptop">
+                            <input type="checkbox" class="input-checkbox-filter-laptop" id="processor" name="processor"
+                                   value="{{ processor.id }}">
+                            <p class="label-name-filter-laptop">{{ processor.name }}</p>
+                        </div>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+
+            <div class="div-title-filter-laptop">
+                <button type="button" class="button-hide-filter-laptop" id="button-filter-laptop-screen_size-id">
+                    <img class="img-hide-filter-laptop" src="/static/main/images/down-arrow-hide.svg"></button>
+                <p class="p-title-filter-laptop">SCREEN SIZES</p>
+            </div>
+            <div class="div-main-filter-laptop" id="filter-laptop-screen_size-id">
+
+                <ul class="ul-checkbox-filter-laptop">
+                    {% for laptop in screen_sizes %}
+                    <li class="li-checkbox-filter-laptop">
+                        <div class="div-checkbox-filter-laptop">
+                            <input type="checkbox" class="input-checkbox-filter-laptop" id="screen_size"
+                                   name="screen_size"
+                                   value="{{ laptop.screen_size }}">
+                            <p class="label-name-filter-laptop">{{ laptop.screen_size }}</p>
+                        </div>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+
+
+            <div class="div-title-filter-laptop">
+                <button type="button" class="button-hide-filter-laptop" id="button-filter-laptop-resolution-id">
+                    <img class="img-hide-filter-laptop" src="/static/main/images/down-arrow-hide.svg"></button>
+                <p class="p-title-filter-laptop">RESOLUTIONS</p>
+            </div>
+            <div class="div-main-filter-laptop" id="filter-laptop-resolution-id">
+
+                <ul class="ul-checkbox-filter-laptop">
+                    {% for laptop in resolutions %}
+                    <li class="li-checkbox-filter-laptop">
+                        <div class="div-checkbox-filter-laptop">
+                            <input type="checkbox" class="input-checkbox-filter-laptop" id="resolution"
+                                   name="resolution"
+                                   value="{{ laptop.resolution }}">
+                            <p class="label-name-filter-laptop">{{ laptop.resolution }}</p>
+                        </div>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+
+            <div class="div-title-filter-laptop">
+                <button type="button" class="button-hide-filter-laptop" id="button-filter-laptop-operating_system-id">
+                    <img class="img-hide-filter-laptop" src="/static/main/images/down-arrow-hide.svg"></button>
+                <p class="p-title-filter-laptop">OPERATING SYSTEMS</p>
+            </div>
+            <div class="div-main-filter-laptop" id="filter-laptop-operating_system-id">
+
+                <ul class="ul-checkbox-filter-laptop">
+                    {% for operating_system in operating_systems %}
+
+                    <li class="li-checkbox-filter-laptop">
+                        <div class="div-checkbox-filter-laptop">
+                            <input type="checkbox" class="input-checkbox-filter-laptop" id="operating_system"
+                                   name="operating_system"
+                                   value="{{ operating_system.id }}">
+                            <p class="label-name-filter-laptop">{{ operating_system.name }}</p>
+                        </div>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+
+            <div class="div-title-filter-laptop">
+                <button type="button" class="button-hide-filter-laptop" id="button-filter-laptop-ram-id">
+                    <img class="img-hide-filter-laptop" src="/static/main/images/down-arrow-hide.svg"></button>
+                <p class="p-title-filter-laptop">RAMS</p>
+            </div>
+            <div class="div-main-filter-laptop" id="filter-laptop-ram-id">
+
+                <ul class="ul-checkbox-filter-laptop">
+                    {% for ram in rams %}
+
+                    <li class="li-checkbox-filter-laptop">
+                        <div class="div-checkbox-filter-laptop">
+                            <input type="checkbox" class="input-checkbox-filter-laptop" id="ram" name="ram"
+                                   value="{{ ram.id }}">
+                            <p class="label-name-filter-laptop">{{ ram.name }}</p>
+                        </div>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+
+            <div class="div-title-filter-laptop">
+                <button type="button" class="button-hide-filter-laptop" id="button-filter-laptop-storage_drive_size-id">
+                    <img class="img-hide-filter-laptop" src="/static/main/images/down-arrow-hide.svg"></button>
+                <p class="p-title-filter-laptop">STORAGE DRIVE SIZES</p>
+            </div>
+            <div class="div-main-filter-laptop" id="filter-laptop-storage_drive_size-id">
+
+                <ul class="ul-checkbox-filter-laptop">
+                    {% for laptop in storage_drive_sizes %}
+                    <li class="li-checkbox-filter-laptop">
+                        <div class="div-checkbox-filter-laptop">
+                            <input type="checkbox" class="input-checkbox-filter-laptop" id="storage_drive_size"
+                                   name="storage_drive_size"
+                                   value="{{ laptop.storage_drive_size }}">
+                            <p class="label-name-filter-laptop">{{ laptop.storage_drive_size }}</p>
+                        </div>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <button type="submit" class="button-show-filter-laptop" form="form-filter">SHOW</button>
+        </form>
+
+        <div class="div-product-all">
+            {% for laptop in queryset %}
+            <div class="product-content-all" data-category="{{ video.name }}">
+                <a style="text-decoration: none;" href="{{ laptop.get_absolute_url }}">
+                    <div class="div-product-picture">
+                        <img class="img-product-picture" src="{{ laptop.image.url }}">
+                    </div>
+                    <div class="div-product-title">
+                        <p class="p-product-title">{{ laptop.title }}</p>
+
+                    </div>
+                </a>
+                <div class="div-product-description">
+                    <p class="p-product-description">OPERATING SYSTEM: <span style="color: #FFD700">{{ laptop.operating_system }}</span>
+                    </p>
+                    <p class="p-product-description">RESOLUTION: <span
+                            style="color: #FFD700">{{ laptop.resolution }}</span>
+                    </p>
+                    <p class="p-product-description">GRAPHICS: <span style="color: #FFD700">{{ laptop.graphics }}</span>
+                    </p>
+                    <p class="p-product-description">PROCESSOR: <span
+                            style="color: #FFD700">{{ laptop.processor }}</span>
+                    </p>
+                    <p class="p-product-description">RAM: <span style="color: #FFD700">{{ laptop.ram }}</span></p>
+                </div>
+                <div class="div-product-price-and-cart">
+                    <div class="div-product-price">
+                        <p class="p-product-price">${{ laptop.price }}</p>
+                    </div>
+                    <div class="div-product-cart">
+                        <a href="{% url 'add_to_cart' slug=laptop.slug %}">
+                            <button class="button-product-cart"><i class="fas fa-shopping-cart"></i></button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+
+            {% endfor %}
+        </div>
+    </div>
+</div>
+<script>
+
+
+const filter_laptop_processor = document.getElementById('filter-laptop-processor-id');
+const button_hide_processor = document.getElementById('button-filter-laptop-processor-id');
+    const filter_laptop_video = document.getElementById('filter-laptop-video-id');
+    const button_hide_video = document.getElementById('button-filter-laptop-video-id');
+    const filter_laptop_screen_size = document.getElementById('filter-laptop-screen_size-id');
+    const button_hide_screen_size = document.getElementById('button-filter-laptop-screen_size-id');
+    const filter_laptop_resolution = document.getElementById('filter-laptop-resolution-id');
+    const button_hide_resolution = document.getElementById('button-filter-laptop-resolution-id');
+    const filter_laptop_operating_system = document.getElementById('filter-laptop-operating_system-id');
+    const button_hide_operating_system = document.getElementById('button-filter-laptop-operating_system-id');
+    const filter_laptop_ram = document.getElementById('filter-laptop-ram-id');
+    const button_hide_ram = document.getElementById('button-filter-laptop-ram-id');
+    const filter_laptop_storage_drive_size = document.getElementById('filter-laptop-storage_drive_size-id');
+    const button_hide_storage_drive_size = document.getElementById('button-filter-laptop-storage_drive_size-id');
+
+button_hide_video.addEventListener("click", function() {
+    videoHideJS();
+
+})
+function videoHideJS() {
+    filter_laptop_video.style.display = filter_laptop_video.style.display === 'block' ? 'none' : 'block';
+    button_hide_video.style.transform = button_hide_video.style.transform === 'rotate(180deg)' ? 'rotate(0deg)' : 'rotate(180deg)';
+
+}
+
+
+
+
+    button_hide_processor.addEventListener("click", function() {
+    processorHideJS();
+
+})
+function processorHideJS() {
+    filter_laptop_processor.style.display = filter_laptop_processor.style.display === 'block' ? 'none' : 'block';
+        button_hide_processor.style.transform = button_hide_processor.style.transform === 'rotate(180deg)' ? 'rotate(0deg)' : 'rotate(180deg)';
+
+}
+    button_hide_screen_size.addEventListener("click", function() {
+    screenSizeHideJS();
+
+})
+function screenSizeHideJS() {
+    filter_laptop_screen_size.style.display = filter_laptop_screen_size.style.display === 'block' ? 'none' : 'block';
+        button_hide_screen_size.style.transform = button_hide_screen_size.style.transform === 'rotate(180deg)' ? 'rotate(0deg)' : 'rotate(180deg)';
+
+}
+    button_hide_resolution.addEventListener("click", function() {
+    resolutionHideJS();
+
+})
+function resolutionHideJS() {
+    filter_laptop_resolution.style.display = filter_laptop_resolution.style.display === 'block' ? 'none' : 'block';
+        button_hide_resolution.style.transform = button_hide_resolution.style.transform === 'rotate(180deg)' ? 'rotate(0deg)' : 'rotate(180deg)';
+
+}
+
+    button_hide_operating_system.addEventListener("click", function() {
+    operatingSystemHideJS();
+
+})
+
+function operatingSystemHideJS() {
+    filter_laptop_operating_system.style.display = filter_laptop_operating_system.style.display === 'block' ? 'none' : 'block';
+        button_hide_operating_system.style.transform = button_hide_operating_system.style.transform === 'rotate(180deg)' ? 'rotate(0deg)' : 'rotate(180deg)';
+
+}
+
+  button_hide_ram.addEventListener("click", function() {
+    ramHideJS();
+
+})
+function ramHideJS() {
+    filter_laptop_ram.style.display = filter_laptop_ram.style.display === 'block' ? 'none' : 'block';
+         button_hide_ram.style.transform = button_hide_ram.style.transform === 'rotate(180deg)' ? 'rotate(0deg)' : 'rotate(180deg)';
+
+}
+
+ button_hide_storage_drive_size.addEventListener("click", function() {
+    storageDriveSizeHideJS();
+
+})
+function storageDriveSizeHideJS() {
+    filter_laptop_storage_drive_size.style.display = filter_laptop_storage_drive_size.style.display === 'block' ? 'none' : 'block';
+         button_hide_storage_drive_size.style.transform = button_hide_storage_drive_size.style.transform === 'rotate(180deg)' ? 'rotate(0deg)' : 'rotate(180deg)';
+
+}
+
+</script>
+
+<script>
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 30 || document.documentElement.scrollTop > 30) {
+    document.getElementById("line-center-div-all-views-id-sticky").style.display = "block";
+    document.getElementById("line-text-views-under-center-line-id-sticky").style.display = "block";
+    document.getElementById("line-center-div-all-views-id").style.opacity = "0";
+  } else {
+    document.getElementById("line-center-div-all-views-id-sticky").style.display = "none";
+    document.getElementById("line-text-views-under-center-line-id-sticky").style.display = "none";
+    document.getElementById("line-center-div-all-views-id").style.opacity = "1";
+  }
+}
+</script>
+{% endblock %}
+
+

@@ -1,0 +1,166 @@
+{% load static %}
+
+<link rel="stylesheet" href="{% static '/main/css/carousel_in_slider.css' %}" type="text/css">
+
+<section class="carousel-in-slider">
+
+    <div class="all-sliders-in-carousel">
+
+        <div class="slide-zero-one active">
+
+            <div class="slid-product">
+                {% for sale in products_sale_laptop %}
+                {% if sale.pk == 1 %}
+                <a href="#">
+                    <div class="slid-product-laptop-one">
+                        <div class="img-div-product-laptop-sale">
+                            <div class="div-save-product-laptop-sale">SAVE $390!</div>
+                            <div class="div-offer-product-laptop-sale">TOP OFFER!</div>
+                            <div style="">
+                                <img class="img-product-laptop-sale" src="{{ sale.products_name.image.url }}"
+                                     alt="Card image cap">
+                            </div>
+                        </div>
+                        <div class="div-text-product-laptop-sale">
+                            <p class="p-text-product-laptop-sale">{{ sale.products_name.title }}</p>
+                        </div>
+                        <div class="div-text-product-laptop-sale-all-price">
+                            <h4 class="p-product-laptop-sale-price">${{ sale.discount }}</h4>
+                            <div class="div-product-laptop-main-price">
+                                <p class="p-product-laptop-main-price">${{ sale.products_name.price }}</p>
+                            </div>
+                        </div>
+                        <div class="div-text-product-laptop-sale-installment">
+                            <p class="p-text-product-laptop-sale-installment">INSTALLMENT: <span
+                                    class="span-text-product-laptop-sale-installment"> 43.3$ x 30 installment 0%</span>
+                            </p>
+                        </div>
+
+                    </div>
+                </a>
+                {% endif %}
+                {% endfor %}
+                {% for sale_one in products_sale_laptop %}
+                {% if sale_one.pk == 2 %}
+                <a href="#">
+                    <div class="slid-product-laptop-two">
+                        <div class="img-div-product-laptop-sale">
+                            <div class="div-save-product-laptop-sale">SAVE $510!</div>
+                            <div class="div-offer-product-laptop-sale">TOP OFFER!</div>
+                            <div style="">
+                                <img class="img-product-laptop-sale" src="{{ sale_one.products_name.image.url }}"
+                                     alt="Card image cap">
+                            </div>
+                        </div>
+                        <div class="div-text-product-laptop-sale">
+                            <p class="p-text-product-laptop-sale">{{ sale_one.products_name.title }}</p>
+                        </div>
+                        <div class="div-text-product-laptop-sale-all-price">
+                            <h4 class="p-product-laptop-sale-price">${{ sale_one.discount }}</h4>
+                            <div class="div-product-laptop-main-price">
+                                <p class="p-product-laptop-main-price">${{ sale_one.products_name.price }}</p>
+                            </div>
+                        </div>
+                        <div class="div-text-product-laptop-sale-installment">
+                            <p class="p-text-product-laptop-sale-installment">INSTALLMENT: <span
+                                    class="span-text-product-laptop-sale-installment"> 56.7$ x 30 installment 0%</span>
+                            </p>
+                        </div>
+
+                    </div>
+                </a>
+                {% endif %}
+                {% endfor %}
+
+            </div>
+
+        </div>
+
+
+        <div class="slide-zero-one">
+
+            <div class="slid-product">
+                {% for sale_two in products_sale_laptop %}
+                {% if sale_two.pk == 3 %}
+                <div>
+                    <div class="slid-product-laptop-one">
+                        <img style="height: 100px; width: 100px;" src="{{ sale_two.products_name.image.url }}"
+                             alt="Card image cap">
+                        <div style="color: red;">{{ sale_two.products_name.title }}</div>
+                        <div style="color: red;">{{ sale_two.discount }}</div>
+                    </div>
+                </div>
+                {% endif %}
+                {% endfor %}
+                {% for sale_three in products_sale_laptop %}
+                {% if sale_three.id == 4 %}
+                <div class="slid-product-laptop-two">
+                    <img style="height: 100px; width: 100px;" src="{{ sale_three.products_name.image.url }}"
+                         alt="Card image cap">
+                    <div style="color: red;">{{ sale_three.products_name.title }}</div>
+                    <div style="color: red;">{{ sale_three.discount }}</div>
+                </div>
+                {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+
+
+        <div class="slide-zero-one">
+
+            <div class="slid-product">
+
+
+                {% for sale_four in products_sale_laptop %}
+                {% if sale_four.pk == 5 %}
+                <div class="slid-product-laptop-one">
+                    <img style="height: 100px; width: 100px;" src="{{ sale_four.products_name.image.url }}"
+                         alt="Card image cap">
+                    <div style="color: red;">{{ sale_four.products_name.title }}</div>
+                    <div style="color: red;">{{ sale_four.discount }}</div>
+                </div>
+                {% endif %}
+                {% endfor %}
+
+                {% for sale_five in products_sale_laptop %}
+                {% if sale_five.pk == 6 %}
+                <div class="slid-product-laptop-two">
+                    <div class="img-div-product-laptop-sale">
+                        <div class="div-save-product-laptop-sale">SAVE $510!</div>
+                        <div class="div-offer-product-laptop-sale">TOP OFFER!</div>
+                        <div style="">
+                            <img class="img-product-laptop-sale" src="{{ sale_five.products_name.image.url }}"
+                                 alt="Card image cap">
+                        </div>
+                    </div>
+                    <div class="div-text-product-laptop-sale">
+                        <p class="p-text-product-laptop-sale">{{ sale_five.products_name.title }}</p>
+                    </div>
+                    <div class="div-text-product-laptop-sale-all-price">
+                        <h4 class="p-product-laptop-sale-price">${{ sale_five.discount }}</h4>
+                        <div class="div-product-laptop-main-price">
+                            <p class="p-product-laptop-main-price">${{ sale_five.products_name.price }}</p>
+                        </div>
+                    </div>
+                    <div class="div-text-product-laptop-sale-installment">
+                        <p class="p-text-product-laptop-sale-installment">INSTALLMENT: <span class="span-text-product-laptop-sale-installment"> 56.7$ x 30 installment 0%</span></p>
+                    </div>
+
+                </div>
+                {% endif %}
+                {% endfor %}
+
+
+            </div>
+        </div>
+
+    </div>
+
+    <div class="controls-zero-one">
+        <div class="prev-zero-one"><</div>
+        <div class="next-zero-one">></div>
+    </div>
+</section>
+
+
+<script src="static/main/js/carousel_in_slider.js"></script>

@@ -1,0 +1,98 @@
+.line-nav-top-views-registration {
+    height: 50px;
+    width: auto;
+    max-width: 100%;
+    background-color: white;
+    z-index: 5;
+
+}
+
+.line-div-top-views-registration {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.div-all-line-registration {
+    width: 1440px;
+}
+
+.div-all-user {
+    float: right;
+    margin-top: -26px;
+}
+
+.div-all-not-user {
+    border: none;
+    background: #fff;
+    height: 30px;
+}
+
+.line-text-views-under-top {
+    color: #adadad;
+    position: relative;
+    top: 5px;
+}
+.div-all-not-user:focus {
+    outline: none;
+}
+.a-all-not-user {
+    text-decoration: none;
+}
+
+.span-login-views {
+    color: black;
+    font-family: 'Sprite Graffiti', serif;
+
+}
+
+.span-login-views:hover {
+    text-decoration: underline;
+}
+
+.Shops-views-in-top-line {
+    position: relative;
+    text-decoration: none;
+    left: 25px;
+    color: black;
+    font-family: 'Sprite Graffiti', serif;
+    cursor: pointer;
+}
+
+.Shops-views-in-top-line:hover {
+    text-decoration: underline;
+    color: black;
+
+}
+
+.Customer-Service-views {
+    text-decoration: none;
+    position: relative;
+    font-family: 'Sprite Graffiti', serif;
+    color: black;
+    cursor: pointer;
+}
+
+.Customer-Service-views:hover {
+    text-decoration: underline;
+    color: black;
+}
+
+.a-all-in-top-line-views {
+    position: relative;
+    margin-top: 12px;
+    width: 200px;
+
+}
+.a-logout-views {
+    position: relative;
+    color: black;
+    text-decoration: none;
+    top: 2px;
+}
+
+.a-logout-views:hover {
+    text-decoration: underline;
+    color: black;
+
+}
